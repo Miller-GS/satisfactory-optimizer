@@ -1,0 +1,5531 @@
+{
+    "recipes": [
+        {
+            "name": "Iron Plate",
+            "inputs": [
+                {
+                    "name": "Iron Ingot",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Iron Plate",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Iron Rod",
+            "inputs": [
+                {
+                    "name": "Iron Ingot",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Iron Rod",
+                    "quantity_per_min": 15.0
+                }
+            ]
+        },
+        {
+            "name": "Iron Ingot",
+            "inputs": [
+                {
+                    "name": "Iron Ore",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Iron Ingot",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Nitro Rocket Fuel",
+            "inputs": [
+                {
+                    "name": "Fuel",
+                    "quantity_per_min": 100.0
+                },
+                {
+                    "name": "Nitrogen Gas",
+                    "quantity_per_min": 75.0
+                },
+                {
+                    "name": "Sulfur",
+                    "quantity_per_min": 100.0
+                },
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 50.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Rocket Fuel",
+                    "quantity_per_min": 150.0
+                },
+                {
+                    "name": "Compacted Coal",
+                    "quantity_per_min": 25.0
+                }
+            ]
+        },
+        {
+            "name": "Rocket Fuel",
+            "inputs": [
+                {
+                    "name": "Turbofuel",
+                    "quantity_per_min": 60.0
+                },
+                {
+                    "name": "Nitric Acid",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Rocket Fuel",
+                    "quantity_per_min": 100.0
+                },
+                {
+                    "name": "Compacted Coal",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Packaged Rocket Fuel",
+            "inputs": [
+                {
+                    "name": "Rocket Fuel",
+                    "quantity_per_min": 120.0
+                },
+                {
+                    "name": "Empty Fluid Tank",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Packaged Rocket Fuel",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Unpackage Rocket Fuel",
+            "inputs": [
+                {
+                    "name": "Packaged Rocket Fuel",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Rocket Fuel",
+                    "quantity_per_min": 120.0
+                },
+                {
+                    "name": "Empty Fluid Tank",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Dark-Ion Fuel",
+            "inputs": [
+                {
+                    "name": "Packaged Rocket Fuel",
+                    "quantity_per_min": 240.0
+                },
+                {
+                    "name": "Dark Matter Crystal",
+                    "quantity_per_min": 80.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Ionized Fuel",
+                    "quantity_per_min": 200.0
+                },
+                {
+                    "name": "Compacted Coal",
+                    "quantity_per_min": 40.0
+                }
+            ]
+        },
+        {
+            "name": "Dark Matter Residue",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 50.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Dark Matter Residue",
+                    "quantity_per_min": 100.0
+                }
+            ]
+        },
+        {
+            "name": "Excited Photonic Matter",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "Excited Photonic Matter",
+                    "quantity_per_min": 200.0
+                }
+            ]
+        },
+        {
+            "name": "Dark Matter Crystal",
+            "inputs": [
+                {
+                    "name": "Diamonds",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Dark Matter Residue",
+                    "quantity_per_min": 150.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Dark Matter Crystal",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Superposition Oscillator",
+            "inputs": [
+                {
+                    "name": "Dark Matter Crystal",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Crystal Oscillator",
+                    "quantity_per_min": 5.0
+                },
+                {
+                    "name": "Alclad Aluminum Sheet",
+                    "quantity_per_min": 45.0
+                },
+                {
+                    "name": "Excited Photonic Matter",
+                    "quantity_per_min": 125.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Superposition Oscillator",
+                    "quantity_per_min": 5.0
+                },
+                {
+                    "name": "Dark Matter Residue",
+                    "quantity_per_min": 125.0
+                }
+            ]
+        },
+        {
+            "name": "Neural-Quantum Processor",
+            "inputs": [
+                {
+                    "name": "Time Crystal",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Supercomputer",
+                    "quantity_per_min": 3.0
+                },
+                {
+                    "name": "Ficsite Trigon",
+                    "quantity_per_min": 45.0
+                },
+                {
+                    "name": "Excited Photonic Matter",
+                    "quantity_per_min": 75.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Neural-Quantum Processor",
+                    "quantity_per_min": 3.0
+                },
+                {
+                    "name": "Dark Matter Residue",
+                    "quantity_per_min": 75.0
+                }
+            ]
+        },
+        {
+            "name": "AI Expansion Server",
+            "inputs": [
+                {
+                    "name": "Magnetic Field Generator",
+                    "quantity_per_min": 4.0
+                },
+                {
+                    "name": "Neural-Quantum Processor",
+                    "quantity_per_min": 4.0
+                },
+                {
+                    "name": "Superposition Oscillator",
+                    "quantity_per_min": 4.0
+                },
+                {
+                    "name": "Excited Photonic Matter",
+                    "quantity_per_min": 100.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "AI Expansion Server",
+                    "quantity_per_min": 4.0
+                },
+                {
+                    "name": "Dark Matter Residue",
+                    "quantity_per_min": 100.0
+                }
+            ]
+        },
+        {
+            "name": "Ionized Fuel",
+            "inputs": [
+                {
+                    "name": "Rocket Fuel",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Power Shard",
+                    "quantity_per_min": 2.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Ionized Fuel",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Compacted Coal",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Packaged Ionized Fuel",
+            "inputs": [
+                {
+                    "name": "Ionized Fuel",
+                    "quantity_per_min": 80.0
+                },
+                {
+                    "name": "Empty Fluid Tank",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Packaged Ionized Fuel",
+                    "quantity_per_min": 40.0
+                }
+            ]
+        },
+        {
+            "name": "Unpackage Ionized Fuel",
+            "inputs": [
+                {
+                    "name": "Packaged Ionized Fuel",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Ionized Fuel",
+                    "quantity_per_min": 80.0
+                },
+                {
+                    "name": "Empty Fluid Tank",
+                    "quantity_per_min": 40.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Turbo Diamonds",
+            "inputs": [
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 600.0
+                },
+                {
+                    "name": "Packaged Turbofuel",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Diamonds",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "SAM Fluctuator",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 60.0
+                },
+                {
+                    "name": "Wire",
+                    "quantity_per_min": 50.0
+                },
+                {
+                    "name": "Steel Pipe",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "SAM Fluctuator",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Ficsite Trigon",
+            "inputs": [
+                {
+                    "name": "Ficsite Ingot",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Ficsite Trigon",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Ficsite Ingot (Iron)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Iron Ingot",
+                    "quantity_per_min": 240.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Ficsite Ingot",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Time Crystal",
+            "inputs": [
+                {
+                    "name": "Diamonds",
+                    "quantity_per_min": 12.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Time Crystal",
+                    "quantity_per_min": 6.0
+                }
+            ]
+        },
+        {
+            "name": "Diamonds",
+            "inputs": [
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 600.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Diamonds",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Reanimated SAM",
+            "inputs": [
+                {
+                    "name": "SAM",
+                    "quantity_per_min": 120.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Biochemical Sculptor",
+            "inputs": [
+                {
+                    "name": "Assembly Director System",
+                    "quantity_per_min": 0.5
+                },
+                {
+                    "name": "Ficsite Trigon",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Biochemical Sculptor",
+                    "quantity_per_min": 2.0
+                }
+            ]
+        },
+        {
+            "name": "Ficsite Ingot (Aluminum)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 60.0
+                },
+                {
+                    "name": "Aluminum Ingot",
+                    "quantity_per_min": 120.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Ficsite Ingot",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Ficsite Ingot (Caterium)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 45.0
+                },
+                {
+                    "name": "Caterium Ingot",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Ficsite Ingot",
+                    "quantity_per_min": 15.0
+                }
+            ]
+        },
+        {
+            "name": "Bauxite (Caterium)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Caterium Ore",
+                    "quantity_per_min": 150.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Bauxite",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Bauxite (Copper)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Copper Ore",
+                    "quantity_per_min": 180.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Bauxite",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Caterium Ore (Copper)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Copper Ore",
+                    "quantity_per_min": 150.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Caterium Ore",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Caterium Ore (Quartz)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Raw Quartz",
+                    "quantity_per_min": 120.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Caterium Ore",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Coal (Iron)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Iron Ore",
+                    "quantity_per_min": 180.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Coal (Limestone)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Limestone",
+                    "quantity_per_min": 360.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Copper Ore (Quartz)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Raw Quartz",
+                    "quantity_per_min": 100.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Copper Ore",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Copper Ore (Sulfur)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Sulfur",
+                    "quantity_per_min": 120.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Copper Ore",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Iron Ore (Limestone)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Limestone",
+                    "quantity_per_min": 240.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Iron Ore",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Limestone (Sulfur)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Sulfur",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Limestone",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Nitrogen Gas (Bauxite)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Bauxite",
+                    "quantity_per_min": 100.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Nitrogen Gas",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Nitrogen Gas (Caterium)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Caterium Ore",
+                    "quantity_per_min": 120.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Nitrogen Gas",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Raw Quartz (Bauxite)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Bauxite",
+                    "quantity_per_min": 100.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Raw Quartz",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Raw Quartz (Coal)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 240.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Raw Quartz",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Sulfur (Coal)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 200.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Sulfur",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Sulfur (Iron)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Iron Ore",
+                    "quantity_per_min": 300.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Sulfur",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Uranium Ore (Bauxite)",
+            "inputs": [
+                {
+                    "name": "Reanimated SAM",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Bauxite",
+                    "quantity_per_min": 480.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Uranium",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Turbofuel",
+            "inputs": [
+                {
+                    "name": "Fuel",
+                    "quantity_per_min": 22.5
+                },
+                {
+                    "name": "Compacted Coal",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Turbofuel",
+                    "quantity_per_min": 18.75
+                }
+            ]
+        },
+        {
+            "name": "Packaged Turbofuel",
+            "inputs": [
+                {
+                    "name": "Turbofuel",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Packaged Turbofuel",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Unpackage Turbofuel",
+            "inputs": [
+                {
+                    "name": "Packaged Turbofuel",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Turbofuel",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Charcoal",
+            "inputs": [
+                {
+                    "name": "Wood",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 150.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Biocoal",
+            "inputs": [
+                {
+                    "name": "Biomass",
+                    "quantity_per_min": 37.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 45.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Compacted Coal",
+            "inputs": [
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 25.0
+                },
+                {
+                    "name": "Sulfur",
+                    "quantity_per_min": 25.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Compacted Coal",
+                    "quantity_per_min": 25.0
+                }
+            ]
+        },
+        {
+            "name": "Circuit Board",
+            "inputs": [
+                {
+                    "name": "Copper Sheet",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Plastic",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Circuit Board",
+                    "quantity_per_min": 7.5
+                }
+            ]
+        },
+        {
+            "name": "Fuel",
+            "inputs": [
+                {
+                    "name": "Crude Oil",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Fuel",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Polymer Resin",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Petroleum Coke",
+            "inputs": [
+                {
+                    "name": "Heavy Oil Residue",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Petroleum Coke",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Plastic",
+            "inputs": [
+                {
+                    "name": "Crude Oil",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Plastic",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Heavy Oil Residue",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Rubber",
+            "inputs": [
+                {
+                    "name": "Crude Oil",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Heavy Oil Residue",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Residual Fuel",
+            "inputs": [
+                {
+                    "name": "Heavy Oil Residue",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Fuel",
+                    "quantity_per_min": 40.0
+                }
+            ]
+        },
+        {
+            "name": "Residual Plastic",
+            "inputs": [
+                {
+                    "name": "Polymer Resin",
+                    "quantity_per_min": 60.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Plastic",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Residual Rubber",
+            "inputs": [
+                {
+                    "name": "Polymer Resin",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Pink Diamonds",
+            "inputs": [
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 120.0
+                },
+                {
+                    "name": "Quartz Crystal",
+                    "quantity_per_min": 45.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Diamonds",
+                    "quantity_per_min": 15.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Petroleum Diamonds",
+            "inputs": [
+                {
+                    "name": "Petroleum Coke",
+                    "quantity_per_min": 720.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Diamonds",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Oil-Based Diamonds",
+            "inputs": [
+                {
+                    "name": "Crude Oil",
+                    "quantity_per_min": 200.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Diamonds",
+                    "quantity_per_min": 40.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Cloudy Diamonds",
+            "inputs": [
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 240.0
+                },
+                {
+                    "name": "Limestone",
+                    "quantity_per_min": 480.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Diamonds",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Dark Matter Trap",
+            "inputs": [
+                {
+                    "name": "Time Crystal",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Dark Matter Residue",
+                    "quantity_per_min": 150.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Dark Matter Crystal",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Dark Matter Crystallization",
+            "inputs": [
+                {
+                    "name": "Dark Matter Residue",
+                    "quantity_per_min": 200.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Dark Matter Crystal",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Wet Concrete",
+            "inputs": [
+                {
+                    "name": "Limestone",
+                    "quantity_per_min": 120.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 100.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Concrete",
+                    "quantity_per_min": 80.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Turbo Heavy Fuel",
+            "inputs": [
+                {
+                    "name": "Heavy Oil Residue",
+                    "quantity_per_min": 37.5
+                },
+                {
+                    "name": "Compacted Coal",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Turbofuel",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Steel Rod",
+            "inputs": [
+                {
+                    "name": "Steel Ingot",
+                    "quantity_per_min": 12.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Iron Rod",
+                    "quantity_per_min": 48.0
+                }
+            ]
+        },
+        {
+            "name": "Steel Beam",
+            "inputs": [
+                {
+                    "name": "Steel Ingot",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Steel Beam",
+                    "quantity_per_min": 15.0
+                }
+            ]
+        },
+        {
+            "name": "Steel Pipe",
+            "inputs": [
+                {
+                    "name": "Steel Ingot",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Steel Pipe",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Steel Ingot",
+            "inputs": [
+                {
+                    "name": "Iron Ore",
+                    "quantity_per_min": 45.0
+                },
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 45.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Steel Ingot",
+                    "quantity_per_min": 45.0
+                }
+            ]
+        },
+        {
+            "name": "Versatile Framework",
+            "inputs": [
+                {
+                    "name": "Modular Frame",
+                    "quantity_per_min": 2.5
+                },
+                {
+                    "name": "Steel Beam",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Versatile Framework",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Steel Canister",
+            "inputs": [
+                {
+                    "name": "Steel Ingot",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 40.0
+                }
+            ]
+        },
+        {
+            "name": "Empty Canister",
+            "inputs": [
+                {
+                    "name": "Plastic",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Packaged Fuel",
+            "inputs": [
+                {
+                    "name": "Fuel",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Packaged Fuel",
+                    "quantity_per_min": 40.0
+                }
+            ]
+        },
+        {
+            "name": "Liquid Biofuel",
+            "inputs": [
+                {
+                    "name": "Solid Biofuel",
+                    "quantity_per_min": 90.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 45.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Liquid Biofuel",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Packaged Liquid Biofuel",
+            "inputs": [
+                {
+                    "name": "Liquid Biofuel",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Packaged Liquid Biofuel",
+                    "quantity_per_min": 40.0
+                }
+            ]
+        },
+        {
+            "name": "Packaged Oil",
+            "inputs": [
+                {
+                    "name": "Crude Oil",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Packaged Oil",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Packaged Heavy Oil Residue",
+            "inputs": [
+                {
+                    "name": "Heavy Oil Residue",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Packaged Heavy Oil Residue",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Packaged Water",
+            "inputs": [
+                {
+                    "name": "Water",
+                    "quantity_per_min": 60.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Packaged Water",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Unpackage Liquid Biofuel",
+            "inputs": [
+                {
+                    "name": "Packaged Liquid Biofuel",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Liquid Biofuel",
+                    "quantity_per_min": 60.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Unpackage Fuel",
+            "inputs": [
+                {
+                    "name": "Packaged Fuel",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Fuel",
+                    "quantity_per_min": 60.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Unpackage Oil",
+            "inputs": [
+                {
+                    "name": "Packaged Oil",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Crude Oil",
+                    "quantity_per_min": 60.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Unpackage Heavy Oil Residue",
+            "inputs": [
+                {
+                    "name": "Packaged Heavy Oil Residue",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Heavy Oil Residue",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Unpackage Water",
+            "inputs": [
+                {
+                    "name": "Packaged Water",
+                    "quantity_per_min": 120.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Water",
+                    "quantity_per_min": 120.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Steamed Copper Sheet",
+            "inputs": [
+                {
+                    "name": "Copper Ingot",
+                    "quantity_per_min": 22.5
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 22.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Copper Sheet",
+                    "quantity_per_min": 22.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Rubber Concrete",
+            "inputs": [
+                {
+                    "name": "Limestone",
+                    "quantity_per_min": 100.0
+                },
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Concrete",
+                    "quantity_per_min": 90.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Recycled Rubber",
+            "inputs": [
+                {
+                    "name": "Plastic",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Fuel",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Pure Quartz Crystal",
+            "inputs": [
+                {
+                    "name": "Raw Quartz",
+                    "quantity_per_min": 67.5
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 37.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Quartz Crystal",
+                    "quantity_per_min": 52.5
+                }
+            ]
+        },
+        {
+            "name": "Quartz Crystal",
+            "inputs": [
+                {
+                    "name": "Raw Quartz",
+                    "quantity_per_min": 37.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Quartz Crystal",
+                    "quantity_per_min": 22.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Pure Iron Ingot",
+            "inputs": [
+                {
+                    "name": "Iron Ore",
+                    "quantity_per_min": 35.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Iron Ingot",
+                    "quantity_per_min": 65.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Pure Copper Ingot",
+            "inputs": [
+                {
+                    "name": "Copper Ore",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Copper Ingot",
+                    "quantity_per_min": 37.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Pure Caterium Ingot",
+            "inputs": [
+                {
+                    "name": "Caterium Ore",
+                    "quantity_per_min": 24.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 24.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Caterium Ingot",
+                    "quantity_per_min": 12.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Pure Aluminum Ingot",
+            "inputs": [
+                {
+                    "name": "Aluminum Scrap",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Aluminum Ingot",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Aluminum Casing",
+            "inputs": [
+                {
+                    "name": "Aluminum Ingot",
+                    "quantity_per_min": 90.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Aluminum Casing",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Alclad Aluminum Sheet",
+            "inputs": [
+                {
+                    "name": "Aluminum Ingot",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Copper Ingot",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Alclad Aluminum Sheet",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Alumina Solution",
+            "inputs": [
+                {
+                    "name": "Bauxite",
+                    "quantity_per_min": 120.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 180.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Alumina Solution",
+                    "quantity_per_min": 120.0
+                },
+                {
+                    "name": "Silica",
+                    "quantity_per_min": 50.0
+                }
+            ]
+        },
+        {
+            "name": "Aluminum Scrap",
+            "inputs": [
+                {
+                    "name": "Alumina Solution",
+                    "quantity_per_min": 240.0
+                },
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 120.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Aluminum Scrap",
+                    "quantity_per_min": 360.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Packaged Alumina Solution",
+            "inputs": [
+                {
+                    "name": "Alumina Solution",
+                    "quantity_per_min": 120.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 120.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Packaged Alumina Solution",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Aluminum Ingot",
+            "inputs": [
+                {
+                    "name": "Aluminum Scrap",
+                    "quantity_per_min": 90.0
+                },
+                {
+                    "name": "Silica",
+                    "quantity_per_min": 75.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Aluminum Ingot",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Silica",
+            "inputs": [
+                {
+                    "name": "Raw Quartz",
+                    "quantity_per_min": 22.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Silica",
+                    "quantity_per_min": 37.5
+                }
+            ]
+        },
+        {
+            "name": "Crystal Oscillator",
+            "inputs": [
+                {
+                    "name": "Quartz Crystal",
+                    "quantity_per_min": 18.0
+                },
+                {
+                    "name": "Cable",
+                    "quantity_per_min": 14.0
+                },
+                {
+                    "name": "Reinforced Iron Plate",
+                    "quantity_per_min": 2.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Crystal Oscillator",
+                    "quantity_per_min": 1.0
+                }
+            ]
+        },
+        {
+            "name": "Unpackage Alumina Solution",
+            "inputs": [
+                {
+                    "name": "Packaged Alumina Solution",
+                    "quantity_per_min": 120.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Alumina Solution",
+                    "quantity_per_min": 120.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Polymer Resin",
+            "inputs": [
+                {
+                    "name": "Crude Oil",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Polymer Resin",
+                    "quantity_per_min": 130.0
+                },
+                {
+                    "name": "Heavy Oil Residue",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Plastic Smart Plating",
+            "inputs": [
+                {
+                    "name": "Reinforced Iron Plate",
+                    "quantity_per_min": 2.5
+                },
+                {
+                    "name": "Rotor",
+                    "quantity_per_min": 2.5
+                },
+                {
+                    "name": "Plastic",
+                    "quantity_per_min": 7.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Smart Plating",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Automated Speed Wiring",
+            "inputs": [
+                {
+                    "name": "Stator",
+                    "quantity_per_min": 3.75
+                },
+                {
+                    "name": "Wire",
+                    "quantity_per_min": 75.0
+                },
+                {
+                    "name": "High-Speed Connector",
+                    "quantity_per_min": 1.875
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Automated Wiring",
+                    "quantity_per_min": 7.5
+                }
+            ]
+        },
+        {
+            "name": "Encased Industrial Beam",
+            "inputs": [
+                {
+                    "name": "Steel Beam",
+                    "quantity_per_min": 18.0
+                },
+                {
+                    "name": "Concrete",
+                    "quantity_per_min": 36.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Encased Industrial Beam",
+                    "quantity_per_min": 6.0
+                }
+            ]
+        },
+        {
+            "name": "Motor",
+            "inputs": [
+                {
+                    "name": "Rotor",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Stator",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Motor",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Stator",
+            "inputs": [
+                {
+                    "name": "Steel Pipe",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Wire",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Stator",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Automated Wiring",
+            "inputs": [
+                {
+                    "name": "Stator",
+                    "quantity_per_min": 2.5
+                },
+                {
+                    "name": "Cable",
+                    "quantity_per_min": 50.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Automated Wiring",
+                    "quantity_per_min": 2.5
+                }
+            ]
+        },
+        {
+            "name": "AI Limiter",
+            "inputs": [
+                {
+                    "name": "Copper Sheet",
+                    "quantity_per_min": 25.0
+                },
+                {
+                    "name": "Quickwire",
+                    "quantity_per_min": 100.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "AI Limiter",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Heavy Oil Residue",
+            "inputs": [
+                {
+                    "name": "Crude Oil",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Heavy Oil Residue",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Polymer Resin",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Heavy Flexible Frame",
+            "inputs": [
+                {
+                    "name": "Modular Frame",
+                    "quantity_per_min": 18.75
+                },
+                {
+                    "name": "Encased Industrial Beam",
+                    "quantity_per_min": 11.25
+                },
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 75.0
+                },
+                {
+                    "name": "Screw",
+                    "quantity_per_min": 390.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Heavy Modular Frame",
+                    "quantity_per_min": 3.75
+                }
+            ]
+        },
+        {
+            "name": "Computer",
+            "inputs": [
+                {
+                    "name": "Circuit Board",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Cable",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Plastic",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Computer",
+                    "quantity_per_min": 2.5
+                }
+            ]
+        },
+        {
+            "name": "Heavy Modular Frame",
+            "inputs": [
+                {
+                    "name": "Modular Frame",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Steel Pipe",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Encased Industrial Beam",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Screw",
+                    "quantity_per_min": 240.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Heavy Modular Frame",
+                    "quantity_per_min": 2.0
+                }
+            ]
+        },
+        {
+            "name": "Modular Engine",
+            "inputs": [
+                {
+                    "name": "Motor",
+                    "quantity_per_min": 2.0
+                },
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Smart Plating",
+                    "quantity_per_min": 2.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Modular Engine",
+                    "quantity_per_min": 1.0
+                }
+            ]
+        },
+        {
+            "name": "Adaptive Control Unit",
+            "inputs": [
+                {
+                    "name": "Automated Wiring",
+                    "quantity_per_min": 5.0
+                },
+                {
+                    "name": "Circuit Board",
+                    "quantity_per_min": 5.0
+                },
+                {
+                    "name": "Heavy Modular Frame",
+                    "quantity_per_min": 1.0
+                },
+                {
+                    "name": "Computer",
+                    "quantity_per_min": 2.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Adaptive Control Unit",
+                    "quantity_per_min": 1.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Fused Wire",
+            "inputs": [
+                {
+                    "name": "Copper Ingot",
+                    "quantity_per_min": 12.0
+                },
+                {
+                    "name": "Caterium Ingot",
+                    "quantity_per_min": 3.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Wire",
+                    "quantity_per_min": 90.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Flexible Framework",
+            "inputs": [
+                {
+                    "name": "Modular Frame",
+                    "quantity_per_min": 3.75
+                },
+                {
+                    "name": "Steel Beam",
+                    "quantity_per_min": 22.5
+                },
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Versatile Framework",
+                    "quantity_per_min": 7.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Electrode Circuit Board",
+            "inputs": [
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Petroleum Coke",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Circuit Board",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Electrode Aluminum Scrap",
+            "inputs": [
+                {
+                    "name": "Alumina Solution",
+                    "quantity_per_min": 180.0
+                },
+                {
+                    "name": "Petroleum Coke",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Aluminum Scrap",
+                    "quantity_per_min": 300.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 105.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Diluted Packaged Fuel",
+            "inputs": [
+                {
+                    "name": "Heavy Oil Residue",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Packaged Water",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Packaged Fuel",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Copper Rotor",
+            "inputs": [
+                {
+                    "name": "Copper Sheet",
+                    "quantity_per_min": 22.5
+                },
+                {
+                    "name": "Screw",
+                    "quantity_per_min": 195.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Rotor",
+                    "quantity_per_min": 11.25
+                }
+            ]
+        },
+        {
+            "name": "Modular Frame",
+            "inputs": [
+                {
+                    "name": "Reinforced Iron Plate",
+                    "quantity_per_min": 3.0
+                },
+                {
+                    "name": "Iron Rod",
+                    "quantity_per_min": 12.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Modular Frame",
+                    "quantity_per_min": 2.0
+                }
+            ]
+        },
+        {
+            "name": "Rotor",
+            "inputs": [
+                {
+                    "name": "Iron Rod",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Screw",
+                    "quantity_per_min": 100.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Rotor",
+                    "quantity_per_min": 4.0
+                }
+            ]
+        },
+        {
+            "name": "Copper Sheet",
+            "inputs": [
+                {
+                    "name": "Copper Ingot",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Copper Sheet",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Smart Plating",
+            "inputs": [
+                {
+                    "name": "Reinforced Iron Plate",
+                    "quantity_per_min": 2.0
+                },
+                {
+                    "name": "Rotor",
+                    "quantity_per_min": 2.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Smart Plating",
+                    "quantity_per_min": 2.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Copper Alloy Ingot",
+            "inputs": [
+                {
+                    "name": "Copper Ore",
+                    "quantity_per_min": 50.0
+                },
+                {
+                    "name": "Iron Ore",
+                    "quantity_per_min": 50.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Copper Ingot",
+                    "quantity_per_min": 100.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Coke Steel Ingot",
+            "inputs": [
+                {
+                    "name": "Iron Ore",
+                    "quantity_per_min": 75.0
+                },
+                {
+                    "name": "Petroleum Coke",
+                    "quantity_per_min": 75.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Steel Ingot",
+                    "quantity_per_min": 100.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Coated Iron Plate",
+            "inputs": [
+                {
+                    "name": "Iron Ingot",
+                    "quantity_per_min": 37.5
+                },
+                {
+                    "name": "Plastic",
+                    "quantity_per_min": 7.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Iron Plate",
+                    "quantity_per_min": 75.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Coated Iron Canister",
+            "inputs": [
+                {
+                    "name": "Iron Plate",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Copper Sheet",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Coated Cable",
+            "inputs": [
+                {
+                    "name": "Wire",
+                    "quantity_per_min": 37.5
+                },
+                {
+                    "name": "Heavy Oil Residue",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Cable",
+                    "quantity_per_min": 67.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Bolted Frame",
+            "inputs": [
+                {
+                    "name": "Reinforced Iron Plate",
+                    "quantity_per_min": 7.5
+                },
+                {
+                    "name": "Screw",
+                    "quantity_per_min": 140.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Modular Frame",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Adhered Iron Plate",
+            "inputs": [
+                {
+                    "name": "Iron Plate",
+                    "quantity_per_min": 11.25
+                },
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 3.75
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Reinforced Iron Plate",
+                    "quantity_per_min": 3.75
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Turbo Pressure Motor",
+            "inputs": [
+                {
+                    "name": "Motor",
+                    "quantity_per_min": 7.5
+                },
+                {
+                    "name": "Pressure Conversion Cube",
+                    "quantity_per_min": 1.875
+                },
+                {
+                    "name": "Packaged Nitrogen Gas",
+                    "quantity_per_min": 45.0
+                },
+                {
+                    "name": "Stator",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Turbo Motor",
+                    "quantity_per_min": 3.75
+                }
+            ]
+        },
+        {
+            "name": "Encased Plutonium Cell",
+            "inputs": [
+                {
+                    "name": "Plutonium Pellet",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Concrete",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Encased Plutonium Cell",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Pressure Conversion Cube",
+            "inputs": [
+                {
+                    "name": "Fused Modular Frame",
+                    "quantity_per_min": 1.0
+                },
+                {
+                    "name": "Radio Control Unit",
+                    "quantity_per_min": 2.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Pressure Conversion Cube",
+                    "quantity_per_min": 1.0
+                }
+            ]
+        },
+        {
+            "name": "Nitric Acid",
+            "inputs": [
+                {
+                    "name": "Nitrogen Gas",
+                    "quantity_per_min": 120.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Iron Plate",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Nitric Acid",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Non-Fissile Uranium",
+            "inputs": [
+                {
+                    "name": "Uranium Waste",
+                    "quantity_per_min": 37.5
+                },
+                {
+                    "name": "Silica",
+                    "quantity_per_min": 25.0
+                },
+                {
+                    "name": "Nitric Acid",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Sulfuric Acid",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Non-Fissile Uranium",
+                    "quantity_per_min": 50.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 15.0
+                }
+            ]
+        },
+        {
+            "name": "Copper Powder",
+            "inputs": [
+                {
+                    "name": "Copper Ingot",
+                    "quantity_per_min": 300.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Copper Powder",
+                    "quantity_per_min": 50.0
+                }
+            ]
+        },
+        {
+            "name": "Plutonium Pellet",
+            "inputs": [
+                {
+                    "name": "Non-Fissile Uranium",
+                    "quantity_per_min": 100.0
+                },
+                {
+                    "name": "Uranium Waste",
+                    "quantity_per_min": 25.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Plutonium Pellet",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Plutonium Fuel Rod",
+            "inputs": [
+                {
+                    "name": "Encased Plutonium Cell",
+                    "quantity_per_min": 7.5
+                },
+                {
+                    "name": "Steel Beam",
+                    "quantity_per_min": 4.5
+                },
+                {
+                    "name": "Electromagnetic Control Rod",
+                    "quantity_per_min": 1.5
+                },
+                {
+                    "name": "Heat Sink",
+                    "quantity_per_min": 2.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Plutonium Fuel Rod",
+                    "quantity_per_min": 0.25
+                }
+            ]
+        },
+        {
+            "name": "Packaged Nitric Acid",
+            "inputs": [
+                {
+                    "name": "Nitric Acid",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Empty Fluid Tank",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Packaged Nitric Acid",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Nuclear Pasta",
+            "inputs": [
+                {
+                    "name": "Copper Powder",
+                    "quantity_per_min": 100.0
+                },
+                {
+                    "name": "Pressure Conversion Cube",
+                    "quantity_per_min": 0.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Nuclear Pasta",
+                    "quantity_per_min": 0.5
+                }
+            ]
+        },
+        {
+            "name": "Unpackage Nitric Acid",
+            "inputs": [
+                {
+                    "name": "Packaged Nitric Acid",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Nitric Acid",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Empty Fluid Tank",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Turbo Blend Fuel",
+            "inputs": [
+                {
+                    "name": "Fuel",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Heavy Oil Residue",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Sulfur",
+                    "quantity_per_min": 22.5
+                },
+                {
+                    "name": "Petroleum Coke",
+                    "quantity_per_min": 22.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Turbofuel",
+                    "quantity_per_min": 45.0
+                }
+            ]
+        },
+        {
+            "name": "Encased Uranium Cell",
+            "inputs": [
+                {
+                    "name": "Uranium",
+                    "quantity_per_min": 50.0
+                },
+                {
+                    "name": "Concrete",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Sulfuric Acid",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Encased Uranium Cell",
+                    "quantity_per_min": 25.0
+                },
+                {
+                    "name": "Sulfuric Acid",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Cooling System",
+            "inputs": [
+                {
+                    "name": "Heat Sink",
+                    "quantity_per_min": 12.0
+                },
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 12.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Nitrogen Gas",
+                    "quantity_per_min": 150.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Cooling System",
+                    "quantity_per_min": 6.0
+                }
+            ]
+        },
+        {
+            "name": "Battery",
+            "inputs": [
+                {
+                    "name": "Sulfuric Acid",
+                    "quantity_per_min": 50.0
+                },
+                {
+                    "name": "Alumina Solution",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Aluminum Casing",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Battery",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Supercomputer",
+            "inputs": [
+                {
+                    "name": "Computer",
+                    "quantity_per_min": 7.5
+                },
+                {
+                    "name": "AI Limiter",
+                    "quantity_per_min": 3.75
+                },
+                {
+                    "name": "High-Speed Connector",
+                    "quantity_per_min": 5.625
+                },
+                {
+                    "name": "Plastic",
+                    "quantity_per_min": 52.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Supercomputer",
+                    "quantity_per_min": 1.875
+                }
+            ]
+        },
+        {
+            "name": "Radio Control Unit",
+            "inputs": [
+                {
+                    "name": "Aluminum Casing",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Crystal Oscillator",
+                    "quantity_per_min": 1.25
+                },
+                {
+                    "name": "Computer",
+                    "quantity_per_min": 2.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Radio Control Unit",
+                    "quantity_per_min": 2.5
+                }
+            ]
+        },
+        {
+            "name": "Sulfuric Acid",
+            "inputs": [
+                {
+                    "name": "Sulfur",
+                    "quantity_per_min": 50.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 50.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Sulfuric Acid",
+                    "quantity_per_min": 50.0
+                }
+            ]
+        },
+        {
+            "name": "Packaged Sulfuric Acid",
+            "inputs": [
+                {
+                    "name": "Sulfuric Acid",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Packaged Sulfuric Acid",
+                    "quantity_per_min": 40.0
+                }
+            ]
+        },
+        {
+            "name": "Assembly Director System",
+            "inputs": [
+                {
+                    "name": "Adaptive Control Unit",
+                    "quantity_per_min": 1.5
+                },
+                {
+                    "name": "Supercomputer",
+                    "quantity_per_min": 0.75
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Assembly Director System",
+                    "quantity_per_min": 0.75
+                }
+            ]
+        },
+        {
+            "name": "High-Speed Connector",
+            "inputs": [
+                {
+                    "name": "Quickwire",
+                    "quantity_per_min": 210.0
+                },
+                {
+                    "name": "Cable",
+                    "quantity_per_min": 37.5
+                },
+                {
+                    "name": "Circuit Board",
+                    "quantity_per_min": 3.75
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "High-Speed Connector",
+                    "quantity_per_min": 3.75
+                }
+            ]
+        },
+        {
+            "name": "Unpackage Sulfuric Acid",
+            "inputs": [
+                {
+                    "name": "Packaged Sulfuric Acid",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Sulfuric Acid",
+                    "quantity_per_min": 60.0
+                },
+                {
+                    "name": "Empty Canister",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Super-State Computer",
+            "inputs": [
+                {
+                    "name": "Computer",
+                    "quantity_per_min": 7.2
+                },
+                {
+                    "name": "Electromagnetic Control Rod",
+                    "quantity_per_min": 2.4
+                },
+                {
+                    "name": "Battery",
+                    "quantity_per_min": 24.0
+                },
+                {
+                    "name": "Wire",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Supercomputer",
+                    "quantity_per_min": 2.4
+                }
+            ]
+        },
+        {
+            "name": "Electromagnetic Control Rod",
+            "inputs": [
+                {
+                    "name": "Stator",
+                    "quantity_per_min": 6.0
+                },
+                {
+                    "name": "AI Limiter",
+                    "quantity_per_min": 4.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Electromagnetic Control Rod",
+                    "quantity_per_min": 4.0
+                }
+            ]
+        },
+        {
+            "name": "Uranium Fuel Rod",
+            "inputs": [
+                {
+                    "name": "Encased Uranium Cell",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Encased Industrial Beam",
+                    "quantity_per_min": 1.2
+                },
+                {
+                    "name": "Electromagnetic Control Rod",
+                    "quantity_per_min": 2.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Uranium Fuel Rod",
+                    "quantity_per_min": 0.4
+                }
+            ]
+        },
+        {
+            "name": "Magnetic Field Generator",
+            "inputs": [
+                {
+                    "name": "Versatile Framework",
+                    "quantity_per_min": 2.5
+                },
+                {
+                    "name": "Electromagnetic Control Rod",
+                    "quantity_per_min": 1.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Magnetic Field Generator",
+                    "quantity_per_min": 1.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Sloppy Alumina",
+            "inputs": [
+                {
+                    "name": "Bauxite",
+                    "quantity_per_min": 200.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 200.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Alumina Solution",
+                    "quantity_per_min": 240.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Radio Control System",
+            "inputs": [
+                {
+                    "name": "Crystal Oscillator",
+                    "quantity_per_min": 1.5
+                },
+                {
+                    "name": "Circuit Board",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Aluminum Casing",
+                    "quantity_per_min": 90.0
+                },
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 45.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Radio Control Unit",
+                    "quantity_per_min": 4.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Plutonium Fuel Unit",
+            "inputs": [
+                {
+                    "name": "Encased Plutonium Cell",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Pressure Conversion Cube",
+                    "quantity_per_min": 0.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Plutonium Fuel Rod",
+                    "quantity_per_min": 0.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: OC Supercomputer",
+            "inputs": [
+                {
+                    "name": "Radio Control Unit",
+                    "quantity_per_min": 6.0
+                },
+                {
+                    "name": "Cooling System",
+                    "quantity_per_min": 6.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Supercomputer",
+                    "quantity_per_min": 3.0
+                }
+            ]
+        },
+        {
+            "name": "Heat Sink",
+            "inputs": [
+                {
+                    "name": "Alclad Aluminum Sheet",
+                    "quantity_per_min": 37.5
+                },
+                {
+                    "name": "Copper Sheet",
+                    "quantity_per_min": 22.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Heat Sink",
+                    "quantity_per_min": 7.5
+                }
+            ]
+        },
+        {
+            "name": "Fused Modular Frame",
+            "inputs": [
+                {
+                    "name": "Heavy Modular Frame",
+                    "quantity_per_min": 1.5
+                },
+                {
+                    "name": "Aluminum Casing",
+                    "quantity_per_min": 75.0
+                },
+                {
+                    "name": "Nitrogen Gas",
+                    "quantity_per_min": 37.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Fused Modular Frame",
+                    "quantity_per_min": 1.5
+                }
+            ]
+        },
+        {
+            "name": "Empty Fluid Tank",
+            "inputs": [
+                {
+                    "name": "Aluminum Ingot",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Empty Fluid Tank",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Packaged Nitrogen Gas",
+            "inputs": [
+                {
+                    "name": "Nitrogen Gas",
+                    "quantity_per_min": 240.0
+                },
+                {
+                    "name": "Empty Fluid Tank",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Packaged Nitrogen Gas",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Unpackage Nitrogen Gas",
+            "inputs": [
+                {
+                    "name": "Packaged Nitrogen Gas",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Nitrogen Gas",
+                    "quantity_per_min": 240.0
+                },
+                {
+                    "name": "Empty Fluid Tank",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Instant Scrap",
+            "inputs": [
+                {
+                    "name": "Bauxite",
+                    "quantity_per_min": 150.0
+                },
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 100.0
+                },
+                {
+                    "name": "Sulfuric Acid",
+                    "quantity_per_min": 50.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Aluminum Scrap",
+                    "quantity_per_min": 300.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 50.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Instant Plutonium Cell",
+            "inputs": [
+                {
+                    "name": "Non-Fissile Uranium",
+                    "quantity_per_min": 75.0
+                },
+                {
+                    "name": "Aluminum Casing",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Encased Plutonium Cell",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Heat-Fused Frame",
+            "inputs": [
+                {
+                    "name": "Heavy Modular Frame",
+                    "quantity_per_min": 3.0
+                },
+                {
+                    "name": "Aluminum Ingot",
+                    "quantity_per_min": 150.0
+                },
+                {
+                    "name": "Nitric Acid",
+                    "quantity_per_min": 24.0
+                },
+                {
+                    "name": "Fuel",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Fused Modular Frame",
+                    "quantity_per_min": 3.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Fertile Uranium",
+            "inputs": [
+                {
+                    "name": "Uranium",
+                    "quantity_per_min": 25.0
+                },
+                {
+                    "name": "Uranium Waste",
+                    "quantity_per_min": 25.0
+                },
+                {
+                    "name": "Nitric Acid",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Sulfuric Acid",
+                    "quantity_per_min": 25.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Non-Fissile Uranium",
+                    "quantity_per_min": 100.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 40.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Electric Motor",
+            "inputs": [
+                {
+                    "name": "Electromagnetic Control Rod",
+                    "quantity_per_min": 3.75
+                },
+                {
+                    "name": "Rotor",
+                    "quantity_per_min": 7.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Motor",
+                    "quantity_per_min": 7.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Diluted Fuel",
+            "inputs": [
+                {
+                    "name": "Heavy Oil Residue",
+                    "quantity_per_min": 50.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 100.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Fuel",
+                    "quantity_per_min": 100.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Cooling Device",
+            "inputs": [
+                {
+                    "name": "Heat Sink",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Motor",
+                    "quantity_per_min": 2.5
+                },
+                {
+                    "name": "Nitrogen Gas",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Cooling System",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Classic Battery",
+            "inputs": [
+                {
+                    "name": "Sulfur",
+                    "quantity_per_min": 45.0
+                },
+                {
+                    "name": "Alclad Aluminum Sheet",
+                    "quantity_per_min": 52.5
+                },
+                {
+                    "name": "Plastic",
+                    "quantity_per_min": 60.0
+                },
+                {
+                    "name": "Wire",
+                    "quantity_per_min": 90.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Battery",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Automated Miner",
+            "inputs": [
+                {
+                    "name": "Steel Pipe",
+                    "quantity_per_min": 4.0
+                },
+                {
+                    "name": "Iron Plate",
+                    "quantity_per_min": 4.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Portable Miner",
+                    "quantity_per_min": 1.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Alclad Casing",
+            "inputs": [
+                {
+                    "name": "Aluminum Ingot",
+                    "quantity_per_min": 150.0
+                },
+                {
+                    "name": "Copper Ingot",
+                    "quantity_per_min": 75.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Aluminum Casing",
+                    "quantity_per_min": 112.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Molded Steel Pipe",
+            "inputs": [
+                {
+                    "name": "Steel Ingot",
+                    "quantity_per_min": 50.0
+                },
+                {
+                    "name": "Concrete",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Steel Pipe",
+                    "quantity_per_min": 50.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Iron Pipe",
+            "inputs": [
+                {
+                    "name": "Iron Ingot",
+                    "quantity_per_min": 100.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Steel Pipe",
+                    "quantity_per_min": 25.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Steel Cast Plate",
+            "inputs": [
+                {
+                    "name": "Iron Ingot",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Steel Ingot",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Iron Plate",
+                    "quantity_per_min": 45.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Molded Beam",
+            "inputs": [
+                {
+                    "name": "Steel Ingot",
+                    "quantity_per_min": 120.0
+                },
+                {
+                    "name": "Concrete",
+                    "quantity_per_min": 80.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Steel Beam",
+                    "quantity_per_min": 45.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Aluminum Beam",
+            "inputs": [
+                {
+                    "name": "Aluminum Ingot",
+                    "quantity_per_min": 22.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Steel Beam",
+                    "quantity_per_min": 22.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Aluminum Rod",
+            "inputs": [
+                {
+                    "name": "Aluminum Ingot",
+                    "quantity_per_min": 7.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Iron Rod",
+                    "quantity_per_min": 52.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Plastic AI Limiter",
+            "inputs": [
+                {
+                    "name": "Quickwire",
+                    "quantity_per_min": 120.0
+                },
+                {
+                    "name": "Plastic",
+                    "quantity_per_min": 28.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "AI Limiter",
+                    "quantity_per_min": 8.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Distilled Silica",
+            "inputs": [
+                {
+                    "name": "Dissolved Silica",
+                    "quantity_per_min": 120.0
+                },
+                {
+                    "name": "Limestone",
+                    "quantity_per_min": 50.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 100.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Silica",
+                    "quantity_per_min": 270.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 80.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Quartz Purification",
+            "inputs": [
+                {
+                    "name": "Raw Quartz",
+                    "quantity_per_min": 120.0
+                },
+                {
+                    "name": "Nitric Acid",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Quartz Crystal",
+                    "quantity_per_min": 75.0
+                },
+                {
+                    "name": "Dissolved Silica",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Fused Quartz Crystal",
+            "inputs": [
+                {
+                    "name": "Raw Quartz",
+                    "quantity_per_min": 75.0
+                },
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 36.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Quartz Crystal",
+                    "quantity_per_min": 54.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Leached Iron ingot",
+            "inputs": [
+                {
+                    "name": "Iron Ore",
+                    "quantity_per_min": 50.0
+                },
+                {
+                    "name": "Sulfuric Acid",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Iron Ingot",
+                    "quantity_per_min": 100.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Basic Iron Ingot",
+            "inputs": [
+                {
+                    "name": "Iron Ore",
+                    "quantity_per_min": 25.0
+                },
+                {
+                    "name": "Limestone",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Iron Ingot",
+                    "quantity_per_min": 50.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Tempered Copper Ingot",
+            "inputs": [
+                {
+                    "name": "Copper Ore",
+                    "quantity_per_min": 25.0
+                },
+                {
+                    "name": "Petroleum Coke",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Copper Ingot",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Leached Copper Ingot",
+            "inputs": [
+                {
+                    "name": "Copper Ore",
+                    "quantity_per_min": 45.0
+                },
+                {
+                    "name": "Sulfuric Acid",
+                    "quantity_per_min": 25.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Copper Ingot",
+                    "quantity_per_min": 110.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Tempered Caterium Ingot",
+            "inputs": [
+                {
+                    "name": "Caterium Ore",
+                    "quantity_per_min": 45.0
+                },
+                {
+                    "name": "Petroleum Coke",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Caterium Ingot",
+                    "quantity_per_min": 22.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Leached Caterium Ingot",
+            "inputs": [
+                {
+                    "name": "Caterium Ore",
+                    "quantity_per_min": 54.0
+                },
+                {
+                    "name": "Sulfuric Acid",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Caterium Ingot",
+                    "quantity_per_min": 36.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Caterium Wire",
+            "inputs": [
+                {
+                    "name": "Caterium Ingot",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Wire",
+                    "quantity_per_min": 120.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Iron Wire",
+            "inputs": [
+                {
+                    "name": "Iron Ingot",
+                    "quantity_per_min": 12.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Wire",
+                    "quantity_per_min": 22.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Infused Uranium Cell",
+            "inputs": [
+                {
+                    "name": "Uranium",
+                    "quantity_per_min": 25.0
+                },
+                {
+                    "name": "Silica",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Sulfur",
+                    "quantity_per_min": 25.0
+                },
+                {
+                    "name": "Quickwire",
+                    "quantity_per_min": 75.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Encased Uranium Cell",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Caterium Ingot",
+            "inputs": [
+                {
+                    "name": "Caterium Ore",
+                    "quantity_per_min": 45.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Caterium Ingot",
+                    "quantity_per_min": 15.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Turbo Electric Motor",
+            "inputs": [
+                {
+                    "name": "Motor",
+                    "quantity_per_min": 6.5625
+                },
+                {
+                    "name": "Radio Control Unit",
+                    "quantity_per_min": 8.4375
+                },
+                {
+                    "name": "Electromagnetic Control Rod",
+                    "quantity_per_min": 4.6875
+                },
+                {
+                    "name": "Rotor",
+                    "quantity_per_min": 6.5625
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Turbo Motor",
+                    "quantity_per_min": 2.8125
+                }
+            ]
+        },
+        {
+            "name": "Turbo Motor",
+            "inputs": [
+                {
+                    "name": "Cooling System",
+                    "quantity_per_min": 7.5
+                },
+                {
+                    "name": "Radio Control Unit",
+                    "quantity_per_min": 3.75
+                },
+                {
+                    "name": "Motor",
+                    "quantity_per_min": 7.5
+                },
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 45.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Turbo Motor",
+                    "quantity_per_min": 1.875
+                }
+            ]
+        },
+        {
+            "name": "Thermal Propulsion Rocket",
+            "inputs": [
+                {
+                    "name": "Modular Engine",
+                    "quantity_per_min": 2.5
+                },
+                {
+                    "name": "Turbo Motor",
+                    "quantity_per_min": 1.0
+                },
+                {
+                    "name": "Cooling System",
+                    "quantity_per_min": 3.0
+                },
+                {
+                    "name": "Fused Modular Frame",
+                    "quantity_per_min": 1.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Thermal Propulsion Rocket",
+                    "quantity_per_min": 1.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Quickwire Stator",
+            "inputs": [
+                {
+                    "name": "Steel Pipe",
+                    "quantity_per_min": 16.0
+                },
+                {
+                    "name": "Quickwire",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Stator",
+                    "quantity_per_min": 8.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Cheap Silica",
+            "inputs": [
+                {
+                    "name": "Raw Quartz",
+                    "quantity_per_min": 22.5
+                },
+                {
+                    "name": "Limestone",
+                    "quantity_per_min": 37.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Silica",
+                    "quantity_per_min": 52.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Steel Screw",
+            "inputs": [
+                {
+                    "name": "Steel Beam",
+                    "quantity_per_min": 5.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Screw",
+                    "quantity_per_min": 260.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Cast Screw",
+            "inputs": [
+                {
+                    "name": "Iron Ingot",
+                    "quantity_per_min": 12.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Screw",
+                    "quantity_per_min": 50.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Steel Rotor",
+            "inputs": [
+                {
+                    "name": "Steel Pipe",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Wire",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Rotor",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Encased Industrial Pipe",
+            "inputs": [
+                {
+                    "name": "Steel Pipe",
+                    "quantity_per_min": 24.0
+                },
+                {
+                    "name": "Concrete",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Encased Industrial Beam",
+                    "quantity_per_min": 4.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Stitched Iron Plate",
+            "inputs": [
+                {
+                    "name": "Iron Plate",
+                    "quantity_per_min": 18.75
+                },
+                {
+                    "name": "Wire",
+                    "quantity_per_min": 37.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Reinforced Iron Plate",
+                    "quantity_per_min": 5.625
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Bolted Iron Plate",
+            "inputs": [
+                {
+                    "name": "Iron Plate",
+                    "quantity_per_min": 90.0
+                },
+                {
+                    "name": "Screw",
+                    "quantity_per_min": 250.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Reinforced Iron Plate",
+                    "quantity_per_min": 15.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Radio Connection Unit",
+            "inputs": [
+                {
+                    "name": "Heat Sink",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "High-Speed Connector",
+                    "quantity_per_min": 7.5
+                },
+                {
+                    "name": "Quartz Crystal",
+                    "quantity_per_min": 45.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Radio Control Unit",
+                    "quantity_per_min": 3.75
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Fused Quickwire",
+            "inputs": [
+                {
+                    "name": "Caterium Ingot",
+                    "quantity_per_min": 7.5
+                },
+                {
+                    "name": "Copper Ingot",
+                    "quantity_per_min": 37.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Quickwire",
+                    "quantity_per_min": 90.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Recycled Plastic",
+            "inputs": [
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Fuel",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Plastic",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Uranium Fuel Unit",
+            "inputs": [
+                {
+                    "name": "Encased Uranium Cell",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Electromagnetic Control Rod",
+                    "quantity_per_min": 2.0
+                },
+                {
+                    "name": "Crystal Oscillator",
+                    "quantity_per_min": 0.6
+                },
+                {
+                    "name": "Rotor",
+                    "quantity_per_min": 2.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Uranium Fuel Rod",
+                    "quantity_per_min": 0.6
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Rigor Motor",
+            "inputs": [
+                {
+                    "name": "Rotor",
+                    "quantity_per_min": 3.75
+                },
+                {
+                    "name": "Stator",
+                    "quantity_per_min": 3.75
+                },
+                {
+                    "name": "Crystal Oscillator",
+                    "quantity_per_min": 1.25
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Motor",
+                    "quantity_per_min": 7.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Steeled Frame",
+            "inputs": [
+                {
+                    "name": "Reinforced Iron Plate",
+                    "quantity_per_min": 2.0
+                },
+                {
+                    "name": "Steel Pipe",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Modular Frame",
+                    "quantity_per_min": 3.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Compacted Steel Ingot",
+            "inputs": [
+                {
+                    "name": "Iron Ore",
+                    "quantity_per_min": 5.0
+                },
+                {
+                    "name": "Compacted Coal",
+                    "quantity_per_min": 2.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Steel Ingot",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Solid Steel Ingot",
+            "inputs": [
+                {
+                    "name": "Iron Ingot",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Steel Ingot",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Iron Alloy Ingot",
+            "inputs": [
+                {
+                    "name": "Iron Ore",
+                    "quantity_per_min": 40.0
+                },
+                {
+                    "name": "Copper Ore",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Iron Ingot",
+                    "quantity_per_min": 75.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Silicon High-Speed Connector",
+            "inputs": [
+                {
+                    "name": "Quickwire",
+                    "quantity_per_min": 90.0
+                },
+                {
+                    "name": "Silica",
+                    "quantity_per_min": 37.5
+                },
+                {
+                    "name": "Circuit Board",
+                    "quantity_per_min": 3.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "High-Speed Connector",
+                    "quantity_per_min": 3.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Heavy Encased Frame",
+            "inputs": [
+                {
+                    "name": "Modular Frame",
+                    "quantity_per_min": 7.5
+                },
+                {
+                    "name": "Encased Industrial Beam",
+                    "quantity_per_min": 9.375
+                },
+                {
+                    "name": "Steel Pipe",
+                    "quantity_per_min": 33.75
+                },
+                {
+                    "name": "Concrete",
+                    "quantity_per_min": 20.625
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Heavy Modular Frame",
+                    "quantity_per_min": 2.8125
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Heat Exchanger",
+            "inputs": [
+                {
+                    "name": "Aluminum Casing",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Heat Sink",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Fine Black Powder",
+            "inputs": [
+                {
+                    "name": "Sulfur",
+                    "quantity_per_min": 7.5
+                },
+                {
+                    "name": "Compacted Coal",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Black Powder",
+                    "quantity_per_min": 45.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Electromagnetic Connection Rod",
+            "inputs": [
+                {
+                    "name": "Stator",
+                    "quantity_per_min": 8.0
+                },
+                {
+                    "name": "High-Speed Connector",
+                    "quantity_per_min": 4.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Electromagnetic Control Rod",
+                    "quantity_per_min": 8.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Insulated Crystal Oscillator",
+            "inputs": [
+                {
+                    "name": "Quartz Crystal",
+                    "quantity_per_min": 18.75
+                },
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 13.125
+                },
+                {
+                    "name": "AI Limiter",
+                    "quantity_per_min": 1.875
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Crystal Oscillator",
+                    "quantity_per_min": 1.875
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Fine Concrete",
+            "inputs": [
+                {
+                    "name": "Silica",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Limestone",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Concrete",
+                    "quantity_per_min": 50.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Crystal Computer",
+            "inputs": [
+                {
+                    "name": "Circuit Board",
+                    "quantity_per_min": 5.0
+                },
+                {
+                    "name": "Crystal Oscillator",
+                    "quantity_per_min": 1.6666666666666667
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Computer",
+                    "quantity_per_min": 3.3333333333333335
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Caterium Computer",
+            "inputs": [
+                {
+                    "name": "Circuit Board",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Quickwire",
+                    "quantity_per_min": 52.5
+                },
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 22.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Computer",
+                    "quantity_per_min": 3.75
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Caterium Circuit Board",
+            "inputs": [
+                {
+                    "name": "Plastic",
+                    "quantity_per_min": 12.5
+                },
+                {
+                    "name": "Quickwire",
+                    "quantity_per_min": 37.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Circuit Board",
+                    "quantity_per_min": 8.75
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Silicon Circuit Board",
+            "inputs": [
+                {
+                    "name": "Copper Sheet",
+                    "quantity_per_min": 27.5
+                },
+                {
+                    "name": "Silica",
+                    "quantity_per_min": 27.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Circuit Board",
+                    "quantity_per_min": 12.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Quickwire Cable",
+            "inputs": [
+                {
+                    "name": "Quickwire",
+                    "quantity_per_min": 7.5
+                },
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 5.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Cable",
+                    "quantity_per_min": 27.5
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Insulated Cable",
+            "inputs": [
+                {
+                    "name": "Wire",
+                    "quantity_per_min": 45.0
+                },
+                {
+                    "name": "Rubber",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Cable",
+                    "quantity_per_min": 100.0
+                }
+            ]
+        },
+        {
+            "name": "Ficsonium",
+            "inputs": [
+                {
+                    "name": "Plutonium Waste",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Singularity Cell",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Dark Matter Residue",
+                    "quantity_per_min": 200.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Ficsonium",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Ficsonium Fuel Rod",
+            "inputs": [
+                {
+                    "name": "Ficsonium",
+                    "quantity_per_min": 5.0
+                },
+                {
+                    "name": "Electromagnetic Control Rod",
+                    "quantity_per_min": 5.0
+                },
+                {
+                    "name": "Ficsite Trigon",
+                    "quantity_per_min": 100.0
+                },
+                {
+                    "name": "Excited Photonic Matter",
+                    "quantity_per_min": 50.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Ficsonium Fuel Rod",
+                    "quantity_per_min": 2.5
+                },
+                {
+                    "name": "Dark Matter Residue",
+                    "quantity_per_min": 50.0
+                }
+            ]
+        },
+        {
+            "name": "Singularity Cell",
+            "inputs": [
+                {
+                    "name": "Nuclear Pasta",
+                    "quantity_per_min": 1.0
+                },
+                {
+                    "name": "Dark Matter Crystal",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Iron Plate",
+                    "quantity_per_min": 100.0
+                },
+                {
+                    "name": "Concrete",
+                    "quantity_per_min": 200.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Singularity Cell",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Ballistic Warp Drive",
+            "inputs": [
+                {
+                    "name": "Thermal Propulsion Rocket",
+                    "quantity_per_min": 1.0
+                },
+                {
+                    "name": "Singularity Cell",
+                    "quantity_per_min": 5.0
+                },
+                {
+                    "name": "Superposition Oscillator",
+                    "quantity_per_min": 2.0
+                },
+                {
+                    "name": "Dark Matter Crystal",
+                    "quantity_per_min": 40.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Ballistic Warp Drive",
+                    "quantity_per_min": 1.0
+                }
+            ]
+        },
+        {
+            "name": "Iodine-Infused Filter",
+            "inputs": [
+                {
+                    "name": "Gas Filter",
+                    "quantity_per_min": 3.75
+                },
+                {
+                    "name": "Quickwire",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Aluminum Casing",
+                    "quantity_per_min": 3.75
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Iodine-Infused Filter",
+                    "quantity_per_min": 3.75
+                }
+            ]
+        },
+        {
+            "name": "Quickwire",
+            "inputs": [
+                {
+                    "name": "Caterium Ingot",
+                    "quantity_per_min": 12.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Quickwire",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Solid Biofuel",
+            "inputs": [
+                {
+                    "name": "Biomass",
+                    "quantity_per_min": 120.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Solid Biofuel",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Hog Protein",
+            "inputs": [
+                {
+                    "name": "Hog Remains",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Alien Protein",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Spitter Protein",
+            "inputs": [
+                {
+                    "name": "Spitter Remains",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Alien Protein",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Biomass (Mycelia)",
+            "inputs": [
+                {
+                    "name": "Mycelia",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Biomass",
+                    "quantity_per_min": 150.0
+                }
+            ]
+        },
+        {
+            "name": "Power Shard (1)",
+            "inputs": [
+                {
+                    "name": "Blue Power Slug",
+                    "quantity_per_min": 7.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Power Shard",
+                    "quantity_per_min": 7.5
+                }
+            ]
+        },
+        {
+            "name": "Black Powder",
+            "inputs": [
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Sulfur",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Black Powder",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Alien Power Matrix",
+            "inputs": [
+                {
+                    "name": "SAM Fluctuator",
+                    "quantity_per_min": 12.5
+                },
+                {
+                    "name": "Power Shard",
+                    "quantity_per_min": 7.5
+                },
+                {
+                    "name": "Superposition Oscillator",
+                    "quantity_per_min": 7.5
+                },
+                {
+                    "name": "Excited Photonic Matter",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Alien Power Matrix",
+                    "quantity_per_min": 2.5
+                },
+                {
+                    "name": "Dark Matter Residue",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Stinger Protein",
+            "inputs": [
+                {
+                    "name": "Stinger Remains",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Alien Protein",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Hatcher Protein",
+            "inputs": [
+                {
+                    "name": "Hatcher Remains",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Alien Protein",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Alien DNA Capsule",
+            "inputs": [
+                {
+                    "name": "Alien Protein",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Alien DNA Capsule",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Biomass (Alien Protein)",
+            "inputs": [
+                {
+                    "name": "Alien Protein",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Biomass",
+                    "quantity_per_min": 1500.0
+                }
+            ]
+        },
+        {
+            "name": "Iron Rebar",
+            "inputs": [
+                {
+                    "name": "Iron Rod",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Iron Rebar",
+                    "quantity_per_min": 15.0
+                }
+            ]
+        },
+        {
+            "name": "Homing Rifle Ammo",
+            "inputs": [
+                {
+                    "name": "Rifle Ammo",
+                    "quantity_per_min": 50.0
+                },
+                {
+                    "name": "High-Speed Connector",
+                    "quantity_per_min": 2.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Homing Rifle Ammo",
+                    "quantity_per_min": 25.0
+                }
+            ]
+        },
+        {
+            "name": "Stun Rebar",
+            "inputs": [
+                {
+                    "name": "Iron Rebar",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Quickwire",
+                    "quantity_per_min": 50.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Stun Rebar",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Gas Filter",
+            "inputs": [
+                {
+                    "name": "Fabric",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Coal",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Iron Plate",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Gas Filter",
+                    "quantity_per_min": 7.5
+                }
+            ]
+        },
+        {
+            "name": "Gas Nobelisk",
+            "inputs": [
+                {
+                    "name": "Nobelisk",
+                    "quantity_per_min": 5.0
+                },
+                {
+                    "name": "Biomass",
+                    "quantity_per_min": 50.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Gas Nobelisk",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Alternate: Polyester Fabric",
+            "inputs": [
+                {
+                    "name": "Polymer Resin",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Water",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Fabric",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Fabric",
+            "inputs": [
+                {
+                    "name": "Mycelia",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Biomass",
+                    "quantity_per_min": 75.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Fabric",
+                    "quantity_per_min": 15.0
+                }
+            ]
+        },
+        {
+            "name": "Synthetic Power Shard",
+            "inputs": [
+                {
+                    "name": "Time Crystal",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Dark Matter Crystal",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Quartz Crystal",
+                    "quantity_per_min": 60.0
+                },
+                {
+                    "name": "Excited Photonic Matter",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Power Shard",
+                    "quantity_per_min": 5.0
+                },
+                {
+                    "name": "Dark Matter Residue",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Power Shard (5)",
+            "inputs": [
+                {
+                    "name": "Purple Power Slug",
+                    "quantity_per_min": 2.5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Power Shard",
+                    "quantity_per_min": 12.5
+                }
+            ]
+        },
+        {
+            "name": "Power Shard (2)",
+            "inputs": [
+                {
+                    "name": "Yellow Power Slug",
+                    "quantity_per_min": 5.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Power Shard",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Pulse Nobelisk",
+            "inputs": [
+                {
+                    "name": "Nobelisk",
+                    "quantity_per_min": 5.0
+                },
+                {
+                    "name": "Crystal Oscillator",
+                    "quantity_per_min": 1.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Pulse Nobelisk",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Shatter Rebar",
+            "inputs": [
+                {
+                    "name": "Iron Rebar",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Quartz Crystal",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Shatter Rebar",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Turbo Rifle Ammo",
+            "inputs": [
+                {
+                    "name": "Rifle Ammo",
+                    "quantity_per_min": 125.0
+                },
+                {
+                    "name": "Aluminum Casing",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Packaged Turbofuel",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Turbo Rifle Ammo",
+                    "quantity_per_min": 250.0
+                }
+            ]
+        },
+        {
+            "name": "Turbo Rifle Ammo",
+            "inputs": [
+                {
+                    "name": "Rifle Ammo",
+                    "quantity_per_min": 125.0
+                },
+                {
+                    "name": "Aluminum Casing",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Turbofuel",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Turbo Rifle Ammo",
+                    "quantity_per_min": 250.0
+                }
+            ]
+        },
+        {
+            "name": "Nuke Nobelisk",
+            "inputs": [
+                {
+                    "name": "Nobelisk",
+                    "quantity_per_min": 2.5
+                },
+                {
+                    "name": "Encased Uranium Cell",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Smokeless Powder",
+                    "quantity_per_min": 5.0
+                },
+                {
+                    "name": "AI Limiter",
+                    "quantity_per_min": 3.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Nuke Nobelisk",
+                    "quantity_per_min": 0.5
+                }
+            ]
+        },
+        {
+            "name": "Rifle Ammo",
+            "inputs": [
+                {
+                    "name": "Copper Sheet",
+                    "quantity_per_min": 15.0
+                },
+                {
+                    "name": "Smokeless Powder",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Rifle Ammo",
+                    "quantity_per_min": 75.0
+                }
+            ]
+        },
+        {
+            "name": "Explosive Rebar",
+            "inputs": [
+                {
+                    "name": "Iron Rebar",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Smokeless Powder",
+                    "quantity_per_min": 10.0
+                },
+                {
+                    "name": "Steel Pipe",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Explosive Rebar",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Cluster Nobelisk",
+            "inputs": [
+                {
+                    "name": "Nobelisk",
+                    "quantity_per_min": 7.5
+                },
+                {
+                    "name": "Smokeless Powder",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Cluster Nobelisk",
+                    "quantity_per_min": 2.5
+                }
+            ]
+        },
+        {
+            "name": "Nobelisk",
+            "inputs": [
+                {
+                    "name": "Black Powder",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Steel Pipe",
+                    "quantity_per_min": 20.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Nobelisk",
+                    "quantity_per_min": 10.0
+                }
+            ]
+        },
+        {
+            "name": "Smokeless Powder",
+            "inputs": [
+                {
+                    "name": "Black Powder",
+                    "quantity_per_min": 20.0
+                },
+                {
+                    "name": "Heavy Oil Residue",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Smokeless Powder",
+                    "quantity_per_min": 20.0
+                }
+            ]
+        },
+        {
+            "name": "Biomass (Leaves)",
+            "inputs": [
+                {
+                    "name": "Leaves",
+                    "quantity_per_min": 120.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Biomass",
+                    "quantity_per_min": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Biomass (Wood)",
+            "inputs": [
+                {
+                    "name": "Wood",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Biomass",
+                    "quantity_per_min": 300.0
+                }
+            ]
+        },
+        {
+            "name": "Reinforced Iron Plate",
+            "inputs": [
+                {
+                    "name": "Iron Plate",
+                    "quantity_per_min": 30.0
+                },
+                {
+                    "name": "Screw",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Reinforced Iron Plate",
+                    "quantity_per_min": 5.0
+                }
+            ]
+        },
+        {
+            "name": "Concrete",
+            "inputs": [
+                {
+                    "name": "Limestone",
+                    "quantity_per_min": 45.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Concrete",
+                    "quantity_per_min": 15.0
+                }
+            ]
+        },
+        {
+            "name": "Screw",
+            "inputs": [
+                {
+                    "name": "Iron Rod",
+                    "quantity_per_min": 10.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Screw",
+                    "quantity_per_min": 40.0
+                }
+            ]
+        },
+        {
+            "name": "Cable",
+            "inputs": [
+                {
+                    "name": "Wire",
+                    "quantity_per_min": 60.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Cable",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Wire",
+            "inputs": [
+                {
+                    "name": "Copper Ingot",
+                    "quantity_per_min": 15.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Wire",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        },
+        {
+            "name": "Copper Ingot",
+            "inputs": [
+                {
+                    "name": "Copper Ore",
+                    "quantity_per_min": 30.0
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Copper Ingot",
+                    "quantity_per_min": 30.0
+                }
+            ]
+        }
+    ],
+    "available_inputs": [
+        {
+            "name": "Iron Ore",
+            "quantity_per_min": 92100.0
+        },
+        {
+            "name": "Coal",
+            "quantity_per_min": 42300.0
+        },
+        {
+            "name": "Sulfur",
+            "quantity_per_min": 10800.0
+        },
+        {
+            "name": "SAM",
+            "quantity_per_min": 10200.0
+        },
+        {
+            "name": "Bauxite",
+            "quantity_per_min": 12300.0
+        },
+        {
+            "name": "Caterium Ore",
+            "quantity_per_min": 15000.0
+        },
+        {
+            "name": "Copper Ore",
+            "quantity_per_min": 36900.0
+        },
+        {
+            "name": "Raw Quartz",
+            "quantity_per_min": 13500.0
+        },
+        {
+            "name": "Limestone",
+            "quantity_per_min": 69900.0
+        },
+        {
+            "name": "Uranium",
+            "quantity_per_min": 2100.0
+        },
+        {
+            "name": "Crude Oil",
+            "quantity_per_min": 12600.0
+        },
+        {
+            "name": "Water",
+            "quantity_per_min": 9007199254740991.0
+        },
+        {
+            "name": "Nitrogen Gas",
+            "quantity_per_min": 12000.0
+        }
+    ],
+    "desired_outputs": [
+        {
+            "name": "Nuclear Pasta",
+            "quantity_per_min": 16.666666
+        },
+        {
+            "name": "Biochemical Sculptor",
+            "quantity_per_min": 16.666666
+        },
+        {
+            "name": "AI Expansion Server",
+            "quantity_per_min": 4.2666666
+        },
+        {
+            "name": "Ballistic Warp Drive",
+            "quantity_per_min": 3.3333333
+        }
+    ]
+}
