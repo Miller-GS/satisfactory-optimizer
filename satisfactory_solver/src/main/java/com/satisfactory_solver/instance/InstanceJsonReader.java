@@ -43,12 +43,17 @@ public class InstanceJsonReader {
             for (JsonNode iNode : node) {
                 String name = iNode.path("name").asText(null);
                 double qty = 0.0;
+                boolean isPrimary = true;
                 if (iNode.has("quantity_per_min")) {
                     qty = iNode.path("quantity_per_min").asDouble(0.0);
                 }
 
+                if (iNode.has("primary")) {
+                    isPrimary = iNode.path("primary").asBoolean(true);
+                }
+
                 if (name != null) {
-                    list.add(new ItemUsage(name, qty));
+                    list.add(new ItemUsage(name, qty, isPrimary));
                 }
             }
         }
