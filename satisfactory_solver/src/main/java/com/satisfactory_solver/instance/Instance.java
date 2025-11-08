@@ -12,4 +12,25 @@ public class Instance {
         this.rawMaterials = rawMaterials;
         this.finalProducts = finalProducts;
     }
+
+    public List<Recipe> getRecipes() {
+        return recipes;
+    }
+
+    public List<ItemUsage> getRawMaterials() {
+        return rawMaterials;
+    }
+
+    public List<ItemUsage> getFinalProducts() {
+        return finalProducts;
+    }
+
+    @Override
+    public String toString() {
+        return "Instance{" +
+                "recipes=" + recipes +
+                ", rawMaterials=" + rawMaterials +
+                ", finalProducts=" + finalProducts +
+                '}';
+    }
 }
