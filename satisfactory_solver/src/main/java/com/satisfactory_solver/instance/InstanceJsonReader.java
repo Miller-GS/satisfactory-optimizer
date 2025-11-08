@@ -1,4 +1,4 @@
-package com.instance;
+package com.satisfactory_solver.instance;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;

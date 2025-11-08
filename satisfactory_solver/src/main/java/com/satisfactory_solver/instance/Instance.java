@@ -1,4 +1,4 @@
-package com.instance;
+package com.satisfactory_solver.instance;
 
 import java.util.List;
 

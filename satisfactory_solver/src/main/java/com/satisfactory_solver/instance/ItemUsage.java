@@ -1,4 +1,4 @@
-package com.instance;
+package com.satisfactory_solver.instance;
 
 public class ItemUsage {
     protected String itemName;
