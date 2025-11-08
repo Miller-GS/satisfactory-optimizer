@@ -24,4 +24,13 @@ public class Recipe {
     public List<ItemUsage> getOutputs() {
         return outputs;
     }
+
+    @Override
+    public String toString() {
+        return "Recipe{" +
+                "recipeName='" + recipeName + '\'' +
+                ", inputs=" + inputs +
+                ", outputs=" + outputs +
+                '}';
+    }
 }

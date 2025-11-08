@@ -16,4 +16,12 @@ public class ItemUsage {
     public double getQuantityPerMinute() {
         return quantityPerMinute;
     }
+
+    @Override
+    public String toString() {
+        return "ItemUsage{" +
+                "itemName='" + itemName + '\'' +
+                ", quantityPerMinute=" + quantityPerMinute +
+                '}';
+    }
 }
