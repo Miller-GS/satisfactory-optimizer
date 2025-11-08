@@ -72,7 +72,8 @@
                 },
                 {
                     "name": "Compacted Coal",
-                    "quantity_per_min": 25.0
+                    "quantity_per_min": 25.0,
+                    "primary": false
                 }
             ]
         },
@@ -95,7 +96,8 @@
                 },
                 {
                     "name": "Compacted Coal",
-                    "quantity_per_min": 10.0
+                    "quantity_per_min": 10.0,
+                    "primary": false
                 }
             ]
         },
@@ -129,11 +131,13 @@
             "outputs": [
                 {
                     "name": "Rocket Fuel",
-                    "quantity_per_min": 120.0
+                    "quantity_per_min": 120.0,
+                    "primary": false
                 },
                 {
                     "name": "Empty Fluid Tank",
-                    "quantity_per_min": 60.0
+                    "quantity_per_min": 60.0,
+                    "primary": false
                 }
             ]
         },
@@ -156,7 +160,8 @@
                 },
                 {
                     "name": "Compacted Coal",
-                    "quantity_per_min": 40.0
+                    "quantity_per_min": 40.0,
+                    "primary": false
                 }
             ]
         },
@@ -231,7 +236,8 @@
                 },
                 {
                     "name": "Dark Matter Residue",
-                    "quantity_per_min": 125.0
+                    "quantity_per_min": 125.0,
+                    "primary": false
                 }
             ]
         },
@@ -262,7 +268,8 @@
                 },
                 {
                     "name": "Dark Matter Residue",
-                    "quantity_per_min": 75.0
+                    "quantity_per_min": 75.0,
+                    "primary": false
                 }
             ]
         },
@@ -293,7 +300,8 @@
                 },
                 {
                     "name": "Dark Matter Residue",
-                    "quantity_per_min": 100.0
+                    "quantity_per_min": 100.0,
+                    "primary": false
                 }
             ]
         },
@@ -316,7 +324,8 @@
                 },
                 {
                     "name": "Compacted Coal",
-                    "quantity_per_min": 5.0
+                    "quantity_per_min": 5.0,
+                    "primary": false
                 }
             ]
         },
@@ -350,11 +359,13 @@
             "outputs": [
                 {
                     "name": "Ionized Fuel",
-                    "quantity_per_min": 80.0
+                    "quantity_per_min": 80.0,
+                    "primary": false
                 },
                 {
                     "name": "Empty Fluid Tank",
-                    "quantity_per_min": 40.0
+                    "quantity_per_min": 40.0,
+                    "primary": false
                 }
             ]
         },
@@ -726,7 +737,8 @@
             "outputs": [
                 {
                     "name": "Limestone",
-                    "quantity_per_min": 120.0
+                    "quantity_per_min": 120.0,
+                    "primary": false
                 }
             ]
         },
@@ -783,7 +795,8 @@
             "outputs": [
                 {
                     "name": "Raw Quartz",
-                    "quantity_per_min": 120.0
+                    "quantity_per_min": 120.0,
+                    "primary": false
                 }
             ]
         },
@@ -912,11 +925,13 @@
             "outputs": [
                 {
                     "name": "Turbofuel",
-                    "quantity_per_min": 20.0
+                    "quantity_per_min": 20.0,
+                    "primary": false
                 },
                 {
                     "name": "Empty Canister",
-                    "quantity_per_min": 20.0
+                    "quantity_per_min": 20.0,
+                    "primary": false
                 }
             ]
         },
@@ -1003,7 +1018,8 @@
                 },
                 {
                     "name": "Polymer Resin",
-                    "quantity_per_min": 30.0
+                    "quantity_per_min": 30.0,
+                    "primary": false
                 }
             ]
         },
@@ -1037,7 +1053,8 @@
                 },
                 {
                     "name": "Heavy Oil Residue",
-                    "quantity_per_min": 10.0
+                    "quantity_per_min": 10.0,
+                    "primary": false
                 }
             ]
         },
@@ -1056,7 +1073,8 @@
                 },
                 {
                     "name": "Heavy Oil Residue",
-                    "quantity_per_min": 20.0
+                    "quantity_per_min": 20.0,
+                    "primary": false
                 }
             ]
         },
@@ -1491,11 +1509,13 @@
             "outputs": [
                 {
                     "name": "Liquid Biofuel",
-                    "quantity_per_min": 60.0
+                    "quantity_per_min": 60.0,
+                    "primary": false
                 },
                 {
                     "name": "Empty Canister",
-                    "quantity_per_min": 60.0
+                    "quantity_per_min": 60.0,
+                    "primary": false
                 }
             ]
         },
@@ -1510,11 +1530,13 @@
             "outputs": [
                 {
                     "name": "Fuel",
-                    "quantity_per_min": 60.0
+                    "quantity_per_min": 60.0,
+                    "primary": false
                 },
                 {
                     "name": "Empty Canister",
-                    "quantity_per_min": 60.0
+                    "quantity_per_min": 60.0,
+                    "primary": false
                 }
             ]
         },
@@ -1529,11 +1551,13 @@
             "outputs": [
                 {
                     "name": "Crude Oil",
-                    "quantity_per_min": 60.0
+                    "quantity_per_min": 60.0,
+                    "primary": false
                 },
                 {
                     "name": "Empty Canister",
-                    "quantity_per_min": 60.0
+                    "quantity_per_min": 60.0,
+                    "primary": false
                 }
             ]
         },
@@ -1548,11 +1572,13 @@
             "outputs": [
                 {
                     "name": "Heavy Oil Residue",
-                    "quantity_per_min": 20.0
+                    "quantity_per_min": 20.0,
+                    "primary": false
                 },
                 {
                     "name": "Empty Canister",
-                    "quantity_per_min": 20.0
+                    "quantity_per_min": 20.0,
+                    "primary": false
                 }
             ]
         },
@@ -1567,11 +1593,13 @@
             "outputs": [
                 {
                     "name": "Water",
-                    "quantity_per_min": 120.0
+                    "quantity_per_min": 120.0,
+                    "primary": false
                 },
                 {
                     "name": "Empty Canister",
-                    "quantity_per_min": 120.0
+                    "quantity_per_min": 120.0,
+                    "primary": false
                 }
             ]
         },
@@ -1791,7 +1819,8 @@
                 },
                 {
                     "name": "Silica",
-                    "quantity_per_min": 50.0
+                    "quantity_per_min": 50.0,
+                    "primary": false
                 }
             ]
         },
@@ -1814,7 +1843,8 @@
                 },
                 {
                     "name": "Water",
-                    "quantity_per_min": 120.0
+                    "quantity_per_min": 120.0,
+                    "primary": false
                 }
             ]
         },
@@ -1905,11 +1935,13 @@
             "outputs": [
                 {
                     "name": "Alumina Solution",
-                    "quantity_per_min": 120.0
+                    "quantity_per_min": 120.0,
+                    "primary": false
                 },
                 {
                     "name": "Empty Canister",
-                    "quantity_per_min": 120.0
+                    "quantity_per_min": 120.0,
+                    "primary": false
                 }
             ]
         },
@@ -1928,7 +1960,8 @@
                 },
                 {
                     "name": "Heavy Oil Residue",
-                    "quantity_per_min": 20.0
+                    "quantity_per_min": 20.0,
+                    "primary": false
                 }
             ]
         },
@@ -2088,7 +2121,8 @@
                 },
                 {
                     "name": "Polymer Resin",
-                    "quantity_per_min": 20.0
+                    "quantity_per_min": 20.0,
+                    "primary": false
                 }
             ]
         },
@@ -2299,7 +2333,8 @@
                 },
                 {
                     "name": "Water",
-                    "quantity_per_min": 105.0
+                    "quantity_per_min": 105.0,
+                    "primary": false
                 }
             ]
         },
@@ -2661,7 +2696,8 @@
                 },
                 {
                     "name": "Water",
-                    "quantity_per_min": 15.0
+                    "quantity_per_min": 15.0,
+                    "primary": false
                 }
             ]
         },
@@ -2775,11 +2811,13 @@
             "outputs": [
                 {
                     "name": "Nitric Acid",
-                    "quantity_per_min": 20.0
+                    "quantity_per_min": 20.0,
+                    "primary": false
                 },
                 {
                     "name": "Empty Fluid Tank",
-                    "quantity_per_min": 20.0
+                    "quantity_per_min": 20.0,
+                    "primary": false
                 }
             ]
         },
@@ -2833,7 +2871,8 @@
                 },
                 {
                     "name": "Sulfuric Acid",
-                    "quantity_per_min": 10.0
+                    "quantity_per_min": 10.0,
+                    "primary": false
                 }
             ]
         },
@@ -2887,7 +2926,8 @@
                 },
                 {
                     "name": "Water",
-                    "quantity_per_min": 30.0
+                    "quantity_per_min": 30.0,
+                    "primary": false
                 }
             ]
         },
@@ -3032,11 +3072,13 @@
             "outputs": [
                 {
                     "name": "Sulfuric Acid",
-                    "quantity_per_min": 60.0
+                    "quantity_per_min": 60.0,
+                    "primary": false
                 },
                 {
                     "name": "Empty Canister",
-                    "quantity_per_min": 60.0
+                    "quantity_per_min": 60.0,
+                    "primary": false
                 }
             ]
         },
@@ -3299,11 +3341,13 @@
             "outputs": [
                 {
                     "name": "Nitrogen Gas",
-                    "quantity_per_min": 240.0
+                    "quantity_per_min": 240.0,
+                    "primary": false
                 },
                 {
                     "name": "Empty Fluid Tank",
-                    "quantity_per_min": 60.0
+                    "quantity_per_min": 60.0,
+                    "primary": false
                 }
             ]
         },
@@ -3334,7 +3378,8 @@
                 },
                 {
                     "name": "Water",
-                    "quantity_per_min": 50.0
+                    "quantity_per_min": 50.0,
+                    "primary": false
                 }
             ]
         },
@@ -3411,7 +3456,8 @@
                 },
                 {
                     "name": "Water",
-                    "quantity_per_min": 40.0
+                    "quantity_per_min": 40.0,
+                    "primary": false
                 }
             ]
         },
@@ -3685,7 +3731,8 @@
                 },
                 {
                     "name": "Water",
-                    "quantity_per_min": 80.0
+                    "quantity_per_min": 80.0,
+                    "primary": false
                 }
             ]
         },
@@ -4199,7 +4246,8 @@
             "outputs": [
                 {
                     "name": "Plastic",
-                    "quantity_per_min": 60.0
+                    "quantity_per_min": 60.0,
+                    "primary": false
                 }
             ]
         },
@@ -4646,7 +4694,8 @@
                 },
                 {
                     "name": "Dark Matter Residue",
-                    "quantity_per_min": 50.0
+                    "quantity_per_min": 50.0,
+                    "primary": false
                 }
             ]
         },
@@ -4863,7 +4912,8 @@
                 },
                 {
                     "name": "Dark Matter Residue",
-                    "quantity_per_min": 60.0
+                    "quantity_per_min": 60.0,
+                    "primary": false
                 }
             ]
         },
@@ -5087,7 +5137,8 @@
                 },
                 {
                     "name": "Dark Matter Residue",
-                    "quantity_per_min": 60.0
+                    "quantity_per_min": 60.0,
+                    "primary": false
                 }
             ]
         },
