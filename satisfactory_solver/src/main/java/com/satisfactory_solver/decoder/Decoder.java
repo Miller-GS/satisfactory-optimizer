@@ -35,7 +35,7 @@ public class Decoder {
         return map;
     }
 
-    public Map<String, Double> decode(List<Double> chromosome) {
+    public DecodedSolution decode(List<Double> chromosome) {
         Map<String, Double> recipeUsages = new HashMap<>();
         // Positive represents demand, negative represents supply
         Map<String, Double> itemLiquidDemand = new HashMap<>();
@@ -89,6 +89,6 @@ public class Decoder {
             index += nRecipesForItem;
             itemLiquidDemand.put(itemName, 0.0); // demand for this item has been satisfied
         }
-        return recipeUsages;
+        return new DecodedSolution(recipeUsages, itemLiquidDemand);
     }
 }
