@@ -34,6 +34,8 @@ public class Main {
         for (Map.Entry<String, Double> entry : itemLiquidDemand.entrySet()) {
             System.out.println("  " + entry.getKey() + ": " + entry.getValue());
         }
+        System.out.println("Unsatisfied Demand Sum: " + decodedSolution.getUnsatisfiedDemandSum());
+        System.out.println("Number of Used Machines: " + decodedSolution.getNumberOfUsedMachines());
     }
 
     private static Instance readJsonFile(String filePath) {
