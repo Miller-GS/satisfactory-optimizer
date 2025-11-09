@@ -1,4 +1,4 @@
-package problems.satisfactory.solvers;
+package com.satisfactory_solver.problems.solvers;
 
 import java.io.IOException;
 import solutions.Solution;
@@ -78,3 +78,4 @@ public class GA_Satisfactory_SteadyState extends GA_Satisfactory
         return bestSol;
     }
 }
+
