@@ -39,6 +39,20 @@ public class Decoder {
         return this.chromosomeLength;
     }
 
+    public Map<Gene, Integer> getGenePositions() {
+        Map<Gene, Integer> genePositions = new HashMap<>();
+        for (String itemName : reverseTopologicalOrder) {
+            List<Recipe> recipes = itemToRecipesMap.get(itemName);
+            if (recipes != null) {
+                for (Recipe recipe : recipes) {
+                    Gene gene = new Gene(itemName, recipe.getRecipeName());
+                    genePositions.put(gene, genePositions.size());
+                }
+            }
+        }
+        return genePositions;
+    }
+
     public DecodedSolution decode(List<Double> chromosome) {
         Map<String, Double> recipeUsages = new HashMap<>();
         // Positive represents demand, negative represents supply
