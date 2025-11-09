@@ -92,6 +92,15 @@ public class Decoder {
             }
             double itemDemand = itemLiquidDemand.getOrDefault(itemName, 0.0);
 
+            if (itemDemand <= 0.0) {
+                // No demand to satisfy for this item
+                // Move index forward to the start of the next item's genes
+                if (nRecipesForItem > 1) {
+                    index += nRecipesForItem;
+                }
+                continue;
+            }
+
             for (int i = 0; i < nRecipesForItem; i++) {
                 Recipe recipe = recipes.get(i);
                 // If there's only one recipe for this item, there is no corresponding gene; assume value 1.0
@@ -123,7 +132,9 @@ public class Decoder {
             if (nRecipesForItem > 1) {
                 index += nRecipesForItem;
             }
-            itemLiquidDemand.put(itemName, 0.0); // demand for this item has been satisfied
+            if (nRecipesForItem > 0) {
+                itemLiquidDemand.put(itemName, 0.0); // demand for this item has been satisfied
+            }
         }
         return new DecodedSolution(recipeUsages, itemLiquidDemand);
     }
