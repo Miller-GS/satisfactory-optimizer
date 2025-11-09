@@ -85,13 +85,9 @@ public class Satisfactory implements Evaluator<Double> {
 	}
 
 	/**
-	 * {@inheritDoc} In the case of a QBF, the evaluation correspond to
-	 * computing a matrix multiplication x'.A.x. A better way to evaluate this
-	 * function when at most two variables are modified is given by methods
-	 * {@link #evaluateInsertionQBF(int)}, {@link #evaluateRemovalQBF(int)} and
-	 * {@link #evaluateExchangeQBF(int,int)}.
+	 * {@inheritDoc} Generates the factory and calculates the number of machines used.
 	 * 
-	 * @return The evaluation of the QBF.
+	 * @return The evaluation of the Satisfactory problem.
 	 */
 	@Override
 	public Double evaluate(Solution<Double> sol) {
@@ -106,13 +102,11 @@ public class Satisfactory implements Evaluator<Double> {
     }
 
 	/**
-	 * Responsible for setting the QBF function parameters by reading the
-	 * necessary input from an external file. this method reads the domain's
-	 * dimension and matrix {@link #A}.
+	 * Responsible for setting the Satisfactory problem parameters by reading the
+	 * necessary input from an external file.
 	 * 
 	 * @param filename
-	 *            Name of the file containing the input for setting the black
-	 *            box function.
+	 *            Name of the file containing the input recipes, available input and desired output.
 	 * @return The dimension of the domain.
 	 * @throws IOException
 	 *             Necessary for I/O operations.

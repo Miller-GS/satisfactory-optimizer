@@ -4,12 +4,11 @@ import java.io.IOException;
 import com.satisfactory_solver.metaheuristics.ga.AbstractGA;
 import com.satisfactory_solver.problems.Satisfactory;
 import com.satisfactory_solver.decoder.DecodedSolution;
-import com.satisfactory_solver.decoder.Decoder;
 import com.satisfactory_solver.decoder.Solution;
 
 /**
  * Metaheuristic GA (Genetic Algorithm) for
- * obtaining an optimal solution to a QBF (Quadractive Binary Function --
+ * obtaining an optimal solution to a Satisfactory problem for minimizing the number of machine
  * {@link #QuadracticBinaryFunction}). 
  * 
  * @author ccavellucci, fusberti
@@ -17,7 +16,7 @@ import com.satisfactory_solver.decoder.Solution;
 public class GA_Satisfactory extends AbstractGA<Double, Double> {
 
 	/**
-	 * Constructor for the GA_QBF class. The QBF objective function is passed as
+	 * Constructor for the GA_Satisfactory class. The Satisfactory objective function is passed as
 	 * argument for the superclass constructor.
 	 * 
 	 * @param generations
@@ -37,10 +36,10 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 	}
 
     /**
-     * Constructor for the GA_QBF class. The QBF objective function is passed as
+     * Constructor for the GA_Satisfactory class. The Satisfactory objective function is passed as
      * argument for the superclass constructor
      * 
-     * @param objFunction The QBF objective function.
+     * @param objFunction The Satisfactory objective function.
      * @param generations Maximum number of generations.
      * @param popSize Size of the population.
      * @param mutationRate The mutation rate.
@@ -52,14 +51,11 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 	/**
 	 * {@inheritDoc}
 	 * 
-	 * This createEmptySol instantiates an empty solution and it attributes a
-	 * zero cost, since it is known that a QBF solution with all variables set
-	 * to zero has also zero cost.
+	 * This createEmptySol instantiates an empty solution
 	 */
 	@Override
 	public Solution<Double> createEmptySol() {
 		Solution<Double> sol = new Solution<Double>();
-		sol.cost = 0.0;
 		return sol;
 	}
 
