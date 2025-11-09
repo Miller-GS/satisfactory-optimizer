@@ -1,5 +1,7 @@
 package com.satisfactory_solver.decoder;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -56,7 +58,8 @@ public class TestDecoder {
     @Test
     public void testChromosomeLengthWhenOneToOneWithRecipe() {
         Decoder decoder = new Decoder(instance);
-        assert (decoder.getChromosomeLength() == 6) : "When every recipe produces exactly one item, chromosome length should equal number of recipes.";
+        // Chromosome encodes only genes for items with multiple recipe choices. In this case, only "Screw" has two recipes.
+        assertEquals(decoder.getChromosomeLength(), 2);
     }
 
     @Test
@@ -68,8 +71,7 @@ public class TestDecoder {
         );
         instance.getRecipes().add(rodAndPlateRecipe);
         Decoder decoder = new Decoder(instance);
-        assert (decoder.getChromosomeLength() == 8) : "The number of genes should equal the sum of the number of recipes that can produce each item. " +
-                                                      "If multiple items are produced by the same recipe, they should each contribute one gene.";
+        assertEquals(decoder.getChromosomeLength(), 6); // Now "Iron Rod" and "Iron Plate" also have multiple recipe choices
     }
 
     @Test
@@ -77,24 +79,22 @@ public class TestDecoder {
         Recipe byproductRecipe = new Recipe(
             "Byproduct Recipe",
             List.of(new ItemUsage("Iron Ingot", 30)),
-            List.of(new ItemUsage("Iron Plate", 20), new ItemUsage("Slag", 10, false)) // Slag is a non-primary output
+            List.of(new ItemUsage("Iron Plate", 20), new ItemUsage("Iron Rod", 10, false)) // Iron Rod is a non-primary output
         );
         instance.getRecipes().add(byproductRecipe);
         Decoder decoder = new Decoder(instance);
-        assert (decoder.getChromosomeLength() == 7) : "Non-primary outputs should not contribute to chromosome length.";
+        assertEquals(decoder.getChromosomeLength(), 4); // "Byproduct Recipe" should not add a gene for "Iron Rod"
     }
 
     @Test
     public void testDecode() {
         Decoder decoder = new Decoder(instance);
         Map<Gene, Integer> genePositions = decoder.getGenePositions();
+
+        // We only need to encode genes for "Screw" since it's the only item with multiple recipe choices
         Map<Gene, Double> chromosomeValues = Map.of(
-            new Gene("Iron Ingot", "Iron Ingot"), 0.5,
-            new Gene("Iron Plate", "Iron Plate"), 1.0,
-            new Gene("Iron Rod", "Iron Rod"), 0.3,
             new Gene("Screw", "Screw"), 0.5,
-            new Gene("Screw", "Alternate: Cast Screw"), 0.1,
-            new Gene("Reinforced Iron Plate", "Reinforced Iron Plate"), 1.0
+            new Gene("Screw", "Alternate: Cast Screw"), 0.1
         );
         List<Double> chromosome = buildChromosome(chromosomeValues, genePositions);
         DecodedSolution decodedSolution = decoder.decode(chromosome);
@@ -116,6 +116,8 @@ public class TestDecoder {
 
         assert (recipeUsages.get("Iron Ingot") == (totalIronIngotsNeeded / 30.0)) : "Iron Ingot recipe usage should be 3.125926... to produce required iron ingots.";
 
+        assert (decodedSolution.getUnsatisfiedDemandSum() == 0) : "All demands should be satisfied, unsatisfied demand sum should be 0.";
+
     }
 
     protected List<Double> buildChromosome(Map<Gene, Double> geneValues, Map<Gene, Integer> genePositions) {
@@ -128,7 +130,9 @@ public class TestDecoder {
             Gene gene = entry.getKey();
             Double value = entry.getValue();
             Integer position = genePositions.get(gene);
-            chromosome.set(position, value);
+            if (position != null) {
+                chromosome.set(position, value);
+            }
         }
         return chromosome;
     }
