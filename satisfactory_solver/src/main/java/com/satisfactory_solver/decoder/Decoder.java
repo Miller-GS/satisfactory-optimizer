@@ -35,6 +35,10 @@ public class Decoder {
         return map;
     }
 
+    public int getChromosomeLength() {
+        return this.chromosomeLength;
+    }
+
     public DecodedSolution decode(List<Double> chromosome) {
         Map<String, Double> recipeUsages = new HashMap<>();
         // Positive represents demand, negative represents supply
