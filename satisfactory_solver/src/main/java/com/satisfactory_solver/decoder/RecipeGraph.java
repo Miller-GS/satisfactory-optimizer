@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 import org.jgrapht.Graph;
 import org.jgrapht.graph.DirectedPseudograph;
+import org.jgrapht.traverse.NotDirectedAcyclicGraphException;
 import org.jgrapht.traverse.TopologicalOrderIterator;
 
 import com.satisfactory_solver.instance.Instance;
@@ -22,12 +23,19 @@ public class RecipeGraph {
     }
 
     public List<String> getTopologicalOrder() {
-        var topoIterator = new TopologicalOrderIterator<>(this.graph);
-        List<String> order = new ArrayList<>();
-        while (topoIterator.hasNext()) {
-            order.add(topoIterator.next());
+        try{
+            var topoIterator = new TopologicalOrderIterator<>(this.graph);
+            List<String> order = new ArrayList<>();
+            while (topoIterator.hasNext()) {
+                order.add(topoIterator.next());
+            }
+            return order;
+        } catch (NotDirectedAcyclicGraphException e) {
+            throw new IllegalStateException(
+                "There is a cycle in the recipe dependency graph. " +
+                "Either remove the recipes causing cycles, or mark their outputs as \"primary\": false so they can be ignored.", e
+            );
         }
-        return order;
     }
 
     protected Graph<String, RecipeEdge> buildDependencyGraph() {

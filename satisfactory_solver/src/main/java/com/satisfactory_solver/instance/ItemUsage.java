@@ -11,6 +11,10 @@ public class ItemUsage {
         this.isPrimary = isPrimary;
     }
 
+    public ItemUsage(String itemName, double quantityPerMinute) {
+        this(itemName, quantityPerMinute, true);
+    }
+
     public String getItemName() {
         return itemName;
     }
