@@ -1,10 +1,11 @@
-package problems.qbf.solvers;
+package com.satisfactory_solver.problems.solvers;
 
 import java.io.IOException;
-import metaheuristics.ga.AbstractGA;
-import problems.qbf.QBF;
-import problems.qbf.QBF_Inverse;
-import solutions.Solution;
+import com.satisfactory_solver.metaheuristics.ga.AbstractGA;
+import com.satisfactory_solver.problems.Satisfactory;
+import com.satisfactory_solver.decoder.DecodedSolution;
+import com.satisfactory_solver.decoder.Decoder;
+import com.satisfactory_solver.decoder.Solution;
 
 /**
  * Metaheuristic GA (Genetic Algorithm) for
@@ -13,7 +14,7 @@ import solutions.Solution;
  * 
  * @author ccavellucci, fusberti
  */
-public class GA_QBF extends AbstractGA<Integer, Integer> {
+public class GA_Satisfactory extends AbstractGA<Integer, Integer> {
 
 	/**
 	 * Constructor for the GA_QBF class. The QBF objective function is passed as
@@ -31,8 +32,8 @@ public class GA_QBF extends AbstractGA<Integer, Integer> {
 	 * @throws IOException
 	 *             Necessary for I/O operations.
 	 */
-	public GA_QBF(Integer generations, Integer popSize, Double mutationRate, String filename, Long timeoutInSeconds) throws IOException {
-		super(new QBF_Inverse(filename), generations, popSize, mutationRate, timeoutInSeconds);
+	public GA_Satisfactory(Integer generations, Integer popSize, Double mutationRate, String filename, Long timeoutInSeconds) throws IOException {
+		super(new Satisfactory(filename), generations, popSize, mutationRate, timeoutInSeconds);
 	}
 
     /**
@@ -44,7 +45,7 @@ public class GA_QBF extends AbstractGA<Integer, Integer> {
      * @param popSize Size of the population.
      * @param mutationRate The mutation rate.
      */
-    public GA_QBF(QBF objFunction, Integer generations, Integer popSize, Double mutationRate, Long timeoutInSeconds) {
+    public GA_Satisfactory(Satisfactory objFunction, Integer generations, Integer popSize, Double mutationRate, Long timeoutInSeconds) {
         super(objFunction, generations, popSize, mutationRate, timeoutInSeconds);
     }
 
@@ -107,7 +108,7 @@ public class GA_QBF extends AbstractGA<Integer, Integer> {
 	@Override
 	protected Double fitness(Chromosome chromosome) {
 
-		return decode(chromosome).cost;
+		return -decode(chromosome).cost;
 
 	}
 
@@ -132,13 +133,26 @@ public class GA_QBF extends AbstractGA<Integer, Integer> {
 	public static void main(String[] args) throws IOException {
 
 		long startTime = System.currentTimeMillis();
-		GA_QBF ga = new GA_QBF(1000, 100, 1.0 / 100.0, "GA-Framework/instances/qbf/qbf100", null);
+		GA_Satisfactory ga = new GA_Satisfactory(1000, 100, 1.0 / 100.0, "instances/phase3.json", null);
 		Solution<Integer> bestSol = ga.solve();
 		System.out.println("maxVal = " + bestSol);
 		long endTime = System.currentTimeMillis();
 		long totalTime = endTime - startTime;
 		System.out.println("Time = " + (double) totalTime / (double) 1000 + " seg");
 
+        DecodedSolution decodedSolution = ((Satisfactory) ga.ObjFunction).decode(bestSol);
+
+        System.out.println("Decoded Recipe Usages:");
+        for (var entry : decodedSolution.getRecipeUsages().entrySet()) {
+            System.out.println("  " + entry.getKey() + ": " + entry.getValue());
+        }
+        var itemLiquidDemand = decodedSolution.getItemLiquidDemand();
+        System.out.println("Item Liquid Demand:");
+        for (var entry : itemLiquidDemand.entrySet()) {
+            System.out.println("  " + entry.getKey() + ": " + entry.getValue());
+        }
+        System.out.println("Unsatisfied Demand Sum: " + decodedSolution.getUnsatisfiedDemandSum());
+        System.out.println("Number of Used Machines: " + decodedSolution.getNumberOfUsedMachines());
 	}
 
 }

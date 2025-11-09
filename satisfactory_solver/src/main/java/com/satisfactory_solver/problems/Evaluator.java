@@ -1,6 +1,6 @@
-package problems;
+package com.satisfactory_solver.problems;
 
-import solutions.Solution;
+import com.satisfactory_solver.decoder.Solution;
 
 /**
  * The Evaluator interface gives to a problem the required functionality to
