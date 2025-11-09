@@ -1,4 +1,4 @@
-package problems.satisfactory.solvers;
+package com.satisfactory_solver.problems.solvers;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -44,4 +44,5 @@ public class GA_Satisfactory_LHS extends GA_Satisfactory {
 
         return population;
     }
+
 }
