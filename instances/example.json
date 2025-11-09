@@ -11,19 +11,14 @@
             "outputs": [{"name": "Iron Plate", "quantity_per_min": 20.0}]
         },
         {
-            "name": "Iron Rod",
-            "inputs": [{"name": "Iron Ingot", "quantity_per_min": 15.0}],
-            "outputs": [{"name": "Iron Rod", "quantity_per_min": 15.0}]
-        },
-        {
             "name": "Reinforced Iron Plate",
-            "inputs": [{"name": "Iron Plate", "quantity_per_min": 30.0}, {"name": "Screws", "quantity_per_min": 60.0}],
+            "inputs": [{"name": "Iron Plate", "quantity_per_min": 30.0}, {"name": "Screw", "quantity_per_min": 60.0}],
             "outputs": [{"name": "Reinforced Iron Plate", "quantity_per_min": 5.0}]
         },
         {
-            "name": "Screws",
-            "inputs": [{"name": "Iron Rod", "quantity_per_min": 10.0}],
-            "outputs": [{"name": "Screws", "quantity_per_min": 40.0}]
+            "name": "Screw",
+            "inputs": [{"name": "Iron Ingot", "quantity_per_min": 10.0}],
+            "outputs": [{"name": "Screw", "quantity_per_min": 40.0}]
         }
     ],
     "available_inputs": [{"name": "Iron Ore", "quantity_per_min": 100.0}],
