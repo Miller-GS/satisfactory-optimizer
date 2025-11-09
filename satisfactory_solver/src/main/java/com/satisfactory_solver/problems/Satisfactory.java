@@ -20,20 +20,10 @@ import com.satisfactory_solver.instance.Instance;
 import com.satisfactory_solver.instance.InstanceJsonReader;
 
 /**
- * A quadractic binary function (QBF) is a function that can be expressed as the
- * sum of quadractic terms: f(x) = \sum{i,j}{a_{ij}*x_i*x_j}. In matricial form
- * a QBF can be expressed as f(x) = x'.A.x 
- * The problem of minimizing a QBF is NP-hard [1], even when no constraints
- * are considered.
- * 
- * [1] Kochenberger, et al. The unconstrained binary quadratic programming
- * problem: a survey. J Comb Optim (2014) 28:58–81. DOI
- * 10.1007/s10878-014-9734-0.
- * 
- * @author ccavellucci, fusberti
- *
+ * The goal of this class is to represent a possible configuration of a factory
+ * in the Satisfactory game. The ultimate goal is to minimize the number of machines.
  */
-public class Satisfactory implements Evaluator<Integer> {
+public class Satisfactory implements Evaluator<Double> {
 
 	/**
 	 * Dimension of the domain.
@@ -49,12 +39,12 @@ public class Satisfactory implements Evaluator<Integer> {
     protected Decoder decoder;
 
 	/**
-	 * The constructor for QuadracticBinaryFunction class. The filename of the
-	 * input for setting matrix of coefficients A of the QBF. The dimension of
+	 * The constructor for Satisfactory class. The filename of the
+	 * input for setting the recipes, available input and desired output. The dimension of
 	 * the array of variables x is returned from the {@link #readInput} method.
 	 * 
 	 * @param filename
-	 *            Name of the file containing the input for setting the QBF.
+	 *            Name of the file containing the input for setting the Satisfactory problem.
 	 * @throws IOException
 	 *             Necessary for I/O operations.
 	 */
@@ -68,8 +58,7 @@ public class Satisfactory implements Evaluator<Integer> {
     }
 
 	/**
-	 * Evaluates the value of a solution by transforming it into a vector. This
-	 * is required to perform the matrix multiplication which defines a QBF.
+	 * Evaluates the value of a solution by transforming it into a vector.
 	 * 
 	 * @param sol
 	 *            the solution which will be evaluated.
@@ -105,59 +94,16 @@ public class Satisfactory implements Evaluator<Integer> {
 	 * @return The evaluation of the QBF.
 	 */
 	@Override
-	public Double evaluate(Solution<Integer> sol) {
+	public Double evaluate(Solution<Double> sol) {
 
-		setVariables(sol);
-        DecodedSolution decoded = decoder.decode(variables);
+        DecodedSolution decoded = decoder.decode(sol);
 		return sol.cost = Double.valueOf(decoded.getNumberOfUsedMachines());
 	}
 
-    public DecodedSolution decode(Solution<Integer> sol) {
-        setVariables(sol);
-        DecodedSolution decoded = decoder.decode(variables);
+    public DecodedSolution decode(Solution<Double> sol) {
+        DecodedSolution decoded = decoder.decode(sol);
         return decoded;
     }
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see problems.Evaluator#evaluateInsertionCost(java.lang.Object,
-	 * solutions.Solution)
-	 */
-	@Override
-	public Double evaluateInsertionCost(Integer elem, Solution<Integer> sol) {
-        setVariables(sol);
-        variables.set(elem, 1.0);
-
-		DecodedSolution decoded = decoder.decode(variables);
-		return sol.cost = Double.valueOf(decoded.getNumberOfUsedMachines());
-	}
-
-	@Override
-	public Double evaluateRemovalCost(Integer elem, Solution<Integer> sol) {
-
-		setVariables(sol);
-        variables.set(elem, 0.0);   
-        DecodedSolution decoded = decoder.decode(variables);
-        return sol.cost = Double.valueOf(decoded.getNumberOfUsedMachines());
-	}
-
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see problems.Evaluator#evaluateExchangeCost(java.lang.Object,
-	 * java.lang.Object, solutions.Solution)
-	 */
-	@Override
-	public Double evaluateExchangeCost(Integer elemIn, Integer elemOut, Solution<Integer> sol) {
-
-		setVariables(sol);
-        variables.set(elemIn, 1.0);
-        variables.set(elemOut, 0.0);    
-        DecodedSolution decoded = decoder.decode(variables);
-        return sol.cost = Double.valueOf(decoded.getNumberOfUsedMachines());
-	}
 
 	/**
 	 * Responsible for setting the QBF function parameters by reading the
@@ -203,9 +149,8 @@ public class Satisfactory implements Evaluator<Integer> {
 
 
     @Override
-    public boolean isFeasible(Solution<Integer> sol) {
-        setVariables(sol);
-        DecodedSolution decoded = decoder.decode(variables);
-        return decoded.getUnsatisfiedDemandSum() == 0.0; 
+    public boolean isFeasible(Solution<Double> sol) {
+        DecodedSolution decoded = decoder.decode(sol);
+        return decoded.getUnsatisfiedDemandSum() == 0.0;
     }
 }

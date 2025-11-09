@@ -14,7 +14,7 @@ import com.satisfactory_solver.decoder.Solution;
  * 
  * @author ccavellucci, fusberti
  */
-public class GA_Satisfactory extends AbstractGA<Integer, Integer> {
+public class GA_Satisfactory extends AbstractGA<Double, Double> {
 
 	/**
 	 * Constructor for the GA_QBF class. The QBF objective function is passed as
@@ -57,8 +57,8 @@ public class GA_Satisfactory extends AbstractGA<Integer, Integer> {
 	 * to zero has also zero cost.
 	 */
 	@Override
-	public Solution<Integer> createEmptySol() {
-		Solution<Integer> sol = new Solution<Integer>();
+	public Solution<Double> createEmptySol() {
+		Solution<Double> sol = new Solution<Double>();
 		sol.cost = 0.0;
 		return sol;
 	}
@@ -70,13 +70,11 @@ public class GA_Satisfactory extends AbstractGA<Integer, Integer> {
 	 * Chromosome)
 	 */
 	@Override
-	protected Solution<Integer> decode(Chromosome chromosome) {
+	protected Solution<Double> decode(Chromosome chromosome) {
 
-		Solution<Integer> solution = createEmptySol();
+		Solution<Double> solution = createEmptySol();
 		for (int locus = 0; locus < chromosome.size(); locus++) {
-			if (chromosome.get(locus) == 1) {
-				solution.add(locus);
-			}
+			solution.add(chromosome.get(locus));
 		}
 
 		ObjFunction.evaluate(solution);
@@ -93,7 +91,7 @@ public class GA_Satisfactory extends AbstractGA<Integer, Integer> {
 
 		Chromosome chromosome = new Chromosome();
 		for (int i = 0; i < chromosomeSize; i++) {
-			chromosome.add(rng.nextInt(2));
+			chromosome.add(Double.valueOf(rng.nextInt(2)));
 		}
 
 		return chromosome;
@@ -134,7 +132,7 @@ public class GA_Satisfactory extends AbstractGA<Integer, Integer> {
 
 		long startTime = System.currentTimeMillis();
 		GA_Satisfactory ga = new GA_Satisfactory(1000, 100, 1.0 / 100.0, "instances/phase3.json", null);
-		Solution<Integer> bestSol = ga.solve();
+		Solution<Double> bestSol = ga.solve();
 		System.out.println("maxVal = " + bestSol);
 		long endTime = System.currentTimeMillis();
 		long totalTime = endTime - startTime;
