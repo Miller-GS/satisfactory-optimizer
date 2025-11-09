@@ -1,5 +1,4 @@
-package solutions;
-
+package com.satisfactory_solver.decoder;
 import java.util.ArrayList;
 
 @SuppressWarnings("serial")

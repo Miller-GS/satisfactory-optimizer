@@ -27,7 +27,7 @@ def main() -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Max-SC-QBF Solver")
+    parser = argparse.ArgumentParser(description="Satisfactory Solver")
     parser.add_argument("--input", type=str, required=True, help="Input file of the instance")
     parser.add_argument("--outdir", type=str, required=True, help="Saves gurobi log into outdir")
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output")

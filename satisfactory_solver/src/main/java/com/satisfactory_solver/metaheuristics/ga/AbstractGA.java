@@ -1,11 +1,11 @@
-package metaheuristics.ga;
+package com.satisfactory_solver.metaheuristics.ga;
 
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.logging.Logger;
 
-import problems.Evaluator;
-import solutions.Solution;
+import com.satisfactory_solver.problems.Evaluator;
+import com.satisfactory_solver.decoder.Solution;
 
 /**
  * Abstract class for metaheuristic GA (Genetic Algorithms). It consider the
