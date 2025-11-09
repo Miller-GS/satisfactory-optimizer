@@ -1,0 +1,40 @@
+GA_Satisfactory_HybridAdaptiveMutation
+This class' function is to dinamically adapt the mutation rate of the genetic algorithm according to two main factors: number of generations with stagnated results and chromossome diversity control.
+In here you can find instructions for adjusting the parameters that controls both of these factors.
+
+1. generationWithoutImprovementMax
+Description: maximum number of consecutive generations without improving the best solution before increasing mutation rate.
+Initial value: 140
+This parameter controls the sensibility of the algorithm regarding stagnation. When the generations without improvings number exceeds this limit, the mutation rate is increased in order to estimulate exporation.
+Suggestions on how to change it:
+- Increasing (150 - 200): avoid excessive mutations, ideal if the GA is having trouble finding feasible solutions
+- Decreasing (70 - 120) - not likely: if the GA is converging too fast, this forces the increasing of mutation rate earlier.
+Explaining why: with bigger populations, the search space is bigger and the improvements tend to arrive much later. Considering our current instances, this will be the case.
+
+2. maxMR and minMR
+Description: superior and inferior limits to the mutation rate
+Initial values: 0.5, 0.001
+These parameters avoids the GA to become too random or to freeze when finding good solutions. The limits helps to guarantee a continuous exploration and a minimum of diversity in the population.
+Suggestions on how to change it:
+- Increasing maxMR (0.7 - 0.8): if the GA frequently stucks with no improvements
+- Decreasing maxMR (0.3 - 0.4): if the GA ends up losing good solutions after mutation peaks
+- Increasing minMR (0.01): if the GA is converging too soon
+- Decreasing minMR (0.0001): if the mutation is generating excessive noise in recent generations
+
+3. diversityThreshold
+Description: minimum threshold of average diversity (genetic variance) below which the algorithm increases the mutation rate.
+Initial value: 0.20
+This parameter controls the algorithm's answer to losing diversity. When it decreases below this limit, it's usually a sign that the GA will have a premature convergency.
+Suggestions on how to change it:
+- Increasing (0.25): if the GA is exploring and mutating too much without improvements
+- Decreasing (0.1 - 0.15): if the GA is converging too soon
+Explaining why: bigger populations and bigger solutions also tends to have lower average diversity. A lower limit avoids the algorithm to fire too much adaptations in the mutation rate.
+
+4. diversityCheckCooldown
+Description: number of generations between diversity checks
+Initial value: 50
+This parameter avoids the algorithm to calculate the diversity with each generation (helping to decrease computational cost). It also helps smoothing the adaptive response.
+Suggestions on how to change it:
+- Increasing (75 - 100): if the calculation is demanding too much of a computational cost or diversity is too stable
+- Decreasing - NOT RECOMENDED: if the population is too dynamic
+Explaining why: if the population size is too big, you should elevate this to avoid abrupt oscilations on the mutation rate. This parameter being bigger also helps on the computational cost. Decreasing it is not recomended exactly because of this: it's too costly to keep calculating diversity too many times.
