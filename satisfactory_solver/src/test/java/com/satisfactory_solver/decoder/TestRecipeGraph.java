@@ -35,13 +35,13 @@ public class TestRecipeGraph {
             List.of(new ItemUsage("Iron Rod", 15))
         ));
         allRecipes.add(new Recipe(
-            "Screw",
+            "Screws",
             List.of(new ItemUsage("Iron Rod", 10)),
-            List.of(new ItemUsage("Screw", 45))
+            List.of(new ItemUsage("Screws", 45))
         ));
         allRecipes.add(new Recipe(
             "Reinforced Iron Plate",
-            List.of(new ItemUsage("Iron Plate", 30), new ItemUsage("Screw", 60)),
+            List.of(new ItemUsage("Iron Plate", 30), new ItemUsage("Screws", 60)),
             List.of(new ItemUsage("Reinforced Iron Plate", 5))
         ));
         List<ItemUsage> rawMaterials = List.of(new ItemUsage("Iron Ore", 100));
@@ -63,9 +63,9 @@ public class TestRecipeGraph {
         assertTrue(itemPositions.get("Iron Ore") < itemPositions.get("Iron Ingot"));
         assertTrue(itemPositions.get("Iron Ingot") < itemPositions.get("Iron Plate"));
         assertTrue(itemPositions.get("Iron Ingot") < itemPositions.get("Iron Rod"));
-        assertTrue(itemPositions.get("Iron Rod") < itemPositions.get("Screw"));
+        assertTrue(itemPositions.get("Iron Rod") < itemPositions.get("Screws"));
         assertTrue(itemPositions.get("Iron Plate") < itemPositions.get("Reinforced Iron Plate"));
-        assertTrue(itemPositions.get("Screw") < itemPositions.get("Reinforced Iron Plate"));
+        assertTrue(itemPositions.get("Screws") < itemPositions.get("Reinforced Iron Plate"));
     }
 
     @Test
