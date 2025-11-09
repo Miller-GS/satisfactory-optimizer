@@ -87,7 +87,7 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 
 		Chromosome chromosome = new Chromosome();
 		for (int i = 0; i < chromosomeSize; i++) {
-			chromosome.add(Double.valueOf(rng.nextInt(2)));
+			chromosome.add(rng.nextDouble());
 		}
 
 		return chromosome;
@@ -115,9 +115,12 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 	 */
 	@Override
 	protected void mutateGene(Chromosome chromosome, Integer locus) {
-
-		chromosome.set(locus, 1 - chromosome.get(locus));
-
+		double newValue = chromosome.get(locus) + rng.nextGaussian() * 0.5;
+		if (newValue < 0.0)
+			newValue = 0.0;
+		if (newValue > 1.0)
+			newValue = 1.0;
+		chromosome.set(locus, newValue);
 	}
 
 	/**
@@ -127,7 +130,7 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 	public static void main(String[] args) throws IOException {
 
 		long startTime = System.currentTimeMillis();
-		GA_Satisfactory ga = new GA_Satisfactory(1000, 100, 1.0 / 100.0, "instances/phase3.json", null);
+		GA_Satisfactory ga = new GA_Satisfactory(10000, 100, 1.0 / 100.0, "instances/phase3.json", 60L);
 		Solution<Double> bestSol = ga.solve();
 		System.out.println("maxVal = " + bestSol);
 		long endTime = System.currentTimeMillis();

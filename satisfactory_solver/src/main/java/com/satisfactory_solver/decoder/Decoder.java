@@ -28,7 +28,10 @@ public class Decoder {
         Map<String, List<Recipe>> map = new HashMap<>();
         for (Recipe recipe : instance.getRecipes()) {
             for (ItemUsage output : recipe.getOutputs()) {
-                if (output.isPrimary()) {
+                // Sometimes, a recipe outputs an item that it also uses as input (e.g., Water)
+                // Only consider outputs that have a positive resulting quantity
+                // Also, do not consider byproducts to avoid cycles in the recipe graph
+                if (output.isPrimary() && recipe.getResultingQuantityForItem(output.getItemName()) > 0) {
                     map.computeIfAbsent(output.getItemName(), k -> new ArrayList<>()).add(recipe);
                 }
             }
