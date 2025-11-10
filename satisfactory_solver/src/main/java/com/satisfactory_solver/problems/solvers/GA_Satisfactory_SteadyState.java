@@ -1,7 +1,8 @@
 package com.satisfactory_solver.problems.solvers;
 
 import java.io.IOException;
-import solutions.Solution;
+
+import com.satisfactory_solver.decoder.Solution;
 
 public class GA_Satisfactory_SteadyState extends GA_Satisfactory
 {
