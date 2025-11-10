@@ -1,7 +1,11 @@
 package com.satisfactory_solver.problems.solvers;
  
 import java.io.IOException;
-import solutions.Solution;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import com.satisfactory_solver.decoder.Solution;
  
 /**
  * GA_Satisfactory variant with hybrid adaptive mutation:
@@ -30,6 +34,31 @@ public class GA_Satisfactory_HybridAdaptiveMutation extends GA_Satisfactory
     {
         super(generations, popSize, mutationRate, filename, timeoutInSeconds);
         this.generationsWithoutImprovementsCounter = 0;
+    }
+
+    @Override
+    protected Population initializePopulation() {
+
+        Population population = new Population();
+
+        for (int i = 0; i < popSize; i++) {
+            population.add(new Chromosome());
+        }
+
+        for (int locus = 0; locus < chromosomeSize; locus++)
+        {
+            List<Integer> strata = new ArrayList<>();
+            for (int s = 0; s < popSize; s++) strata.add(s);
+            Collections.shuffle(strata, rng);
+
+            for (int ind = 0; ind < popSize; ind++)
+            {
+                double value = (strata.get(ind) + rng.nextDouble()) / ((double) popSize);
+                population.get(ind).add(value);
+            }
+        }
+
+        return population;
     }
  
     @Override
@@ -173,5 +202,4 @@ public class GA_Satisfactory_HybridAdaptiveMutation extends GA_Satisfactory
         double avgVar = totalVar / m;
         return avgVar;
     }
-
 }
