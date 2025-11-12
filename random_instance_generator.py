@@ -52,23 +52,19 @@ def generate_instance(
 ) -> None:
     result = {
         "recipes": [recipe.to_dict() for recipe in generate_recipes(items, input_items, output_items, recipes, seed)],
-        "available_inputs": [generate_item_with_random_quantity(f"Item_{i}", multiplier=10.0).to_dict() for i in range(input_items)],
+        "available_inputs": [generate_item_with_random_quantity(f"Item_{i}", multiplier=10.0, addend=100.0).to_dict() for i in range(input_items)],
         "desired_outputs": [generate_item_with_random_quantity(f"Item_{i}", multiplier=2.0).to_dict() for i in range(items - output_items, items)],
     }
     with open(os.path.join(outdir, f"{instance_name}.json"), 'w', encoding='utf-8') as f:
         json.dump(result, f, ensure_ascii=False, indent=4)
 
+
 def generate_recipes(items: int, input_items: int, output_items: int, recipes: int, seed: int) -> list[Recipe]:
     """
-    Generate a list of recipes based on the provided parameters.
-    It will form a Directed Acyclic Graph (DAG) where:
-    - There are `items` unique items in total.
-    - There are `input_items` items that can be sourced externally (available inputs).
-    - There are `output_items` items that are the final desired products (desired outputs).
-    - There are `recipes` recipes that transform items into other items
-    (potentially using multiple inputs and producing multiple outputs).
-    - There may be intermediate items that are neither inputs nor outputs.
-    - Every item must be produced by at least one recipe or be an available input.
+    Generate recipes forming a valid DAG:
+      • Every non-input item is produced at least once.
+      • Exactly `recipes` recipes are generated.
+      • Acyclicity guaranteed via topological positions.
     """
     if input_items + output_items > items:
         raise ValueError("The sum of input_items and output_items cannot exceed total items.")
@@ -77,111 +73,121 @@ def generate_recipes(items: int, input_items: int, output_items: int, recipes: i
 
     random.seed(seed)
 
-    # Create a random topological order of items and use it to prevent cycles.
-    # We'll assign each item a position in a linear order and only allow
-    # recipes that consume items with strictly lower positions than the
-    # items they produce. Also place available inputs at the low end and
-    # desired outputs at the high end to make DAG construction straightforward.
-    all_item_names = [f"Item_{i}" for i in range(items)]
-    ordering = all_item_names.copy()
+    # --- Assign topological positions ---
+    all_items = [f"Item_{i}" for i in range(items)]
+    intermediate_item_names = all_items[input_items:items - output_items]
+    ordering = intermediate_item_names.copy()
     random.shuffle(ordering)
+    ordering = all_items[:input_items] + ordering + all_items[items - output_items:]
     position = {name: idx for idx, name in enumerate(ordering)}
 
-    # Choose available inputs from the lowest-position items and desired
-    # outputs from the highest-position items. This guarantees that inputs
-    # precede outputs in the topological order.
-    available_input_names: set[str] = set(ordering[:input_items]) if input_items > 0 else set()
-    desired_output_names: set[str] = set(ordering[-output_items:]) if output_items > 0 else set()
+    inputs_set = set(ordering[:input_items])
+    outputs_set = set(ordering[-output_items:])
+    must_produce = set(ordering) - inputs_set
 
-    intermediate_names: set[str] = set(ordering) - available_input_names - desired_output_names
-    must_be_produced_names: set[str] = set(ordering) - available_input_names
+    safe_inputs = set(inputs_set)
+    produced = set()
 
-    safe_to_use_as_input_names: set[str] = available_input_names.copy()
-    produced_items_names: set[str] = set()
+    min_in, max_in = 1, min(4, max(1, items // 2))
+    min_out, max_out = 1, min(2, max(1, items // 2))
 
-    generated_recipes: list[Recipe] = []
-    recipe_index = 1
+    recipes_list: list[Recipe] = []
+    recipe_idx = 1
 
-    min_inputs = 1
-    max_inputs = min(4, max(1, items // 2))
-    min_outputs = 1
-    max_outputs = min(4, max(1, items // 2))
-
-    # A. Guarantee all must-be-produced items are produced at least once
-    # Process items in increasing topological position so inputs exist when needed.
-    production_priority = sorted(list(must_be_produced_names), key=lambda n: position[n])
-
-    for output_name in production_priority:
-        if output_name in produced_items_names:
+    # ---------- Phase 1: ensure coverage ----------
+    for target in sorted(must_produce, key=lambda x: position[x]):
+        if target in produced:
             continue
 
-        # Choose inputs only from items with lower position than the chosen output
-        candidate_inputs = [n for n in safe_to_use_as_input_names if position[n] < position[output_name]]
-        if not candidate_inputs:
-            # No valid earlier inputs available; skip producing this item now.
-            # It may be produced later as other items become available.
+        # Inputs must come strictly before target
+        candidates = [n for n in safe_inputs if position[n] < position[target]]
+        if not candidates:
+            # fallback: any available input with lower position
+            candidates = [n for n in ordering if position[n] < position[target]]
+        if not candidates:
             continue
 
-        num_inputs = random.randint(min_inputs, max_inputs)
-        inputs_names = random.sample(candidate_inputs, min(num_inputs, len(candidate_inputs)))
-        input_items_list = [generate_item_with_random_quantity(name) for name in inputs_names]
+        n_inputs = random.randint(min_in, max_in)
+        chosen_inputs = random.sample(candidates, min(n_inputs, len(candidates)))
 
-        # Secondary outputs must also be strictly after all inputs to avoid cycles.
-        max_input_pos = max(position[n] for n in inputs_names) if inputs_names else -1
-        num_secondary_outputs = random.randint(0, max_outputs - 1)
-        secondary_output_candidates = [n for n in (must_be_produced_names - produced_items_names)
-                                       if n not in inputs_names and n != output_name and position[n] > max_input_pos]
+        max_pos = max(position[n] for n in chosen_inputs)
+        possible_outs = [n for n in must_produce | outputs_set
+                         if n != target and position[n] > max_pos]
+        n_outs = random.randint(1, max_out)  # at least one output (target)
+        chosen_outs = [target]
+        if possible_outs:
+            chosen_outs += random.sample(possible_outs, min(n_outs - 1, len(possible_outs)))
 
-        secondary_output_names = random.sample(secondary_output_candidates, min(num_secondary_outputs, len(secondary_output_candidates)))
+        recipes_list.append(
+            Recipe(
+                f"Recipe_{recipe_idx}",
+                [generate_item_with_random_quantity(i) for i in chosen_inputs],
+                [generate_item_with_random_quantity(o) for o in chosen_outs],
+            )
+        )
+        recipe_idx += 1
 
-        all_output_names = [output_name] + secondary_output_names
-        output_items_list = [generate_item_with_random_quantity(name) for name in all_output_names]
+        safe_inputs.update(chosen_outs)
+        produced.update(chosen_outs)
 
-        recipe_name = f"Recipe_{recipe_index}"
-        new_recipe = Recipe(recipe_name, input_items_list, output_items_list)
-        generated_recipes.append(new_recipe)
-        recipe_index += 1
-
-        produced_items_names.update(all_output_names)
-        safe_to_use_as_input_names.update(all_output_names)
-
-    # B. Generate remaining recipes while preserving the topological constraint
-    all_available_names = set(ordering)
-    remaining_recipes = recipes - len(generated_recipes)
-
-    while remaining_recipes > 0:
-        candidate_inputs = [n for n in safe_to_use_as_input_names]
-        if not candidate_inputs:
+        if len(recipes_list) >= recipes:
             break
 
-        num_inputs = random.randint(min_inputs, max_inputs)
-        inputs_names = random.sample(candidate_inputs, min(num_inputs, len(candidate_inputs)))
-        input_items_list = [generate_item_with_random_quantity(name) for name in inputs_names]
+    # ---------- Phase 2: fill to reach desired count ----------
+    remaining = recipes - len(recipes_list)
+    all_names = set(ordering)
+    attempts = 0
+    max_attempts = recipes * 20
 
-        # Only allow outputs at positions strictly greater than the max input position
-        max_input_pos = max(position[n] for n in inputs_names) if inputs_names else -1
-        output_candidates = [n for n in all_available_names if n not in inputs_names and position[n] > max_input_pos]
-        if not output_candidates:
-            # Can't create an acyclic recipe from these inputs; skip this extra recipe
+    while remaining > 0 and attempts < max_attempts:
+        attempts += 1
+        if not safe_inputs:
+            safe_inputs.update(inputs_set)
+
+        n_inputs = random.randint(min_in, max_in)
+        chosen_inputs = random.sample(list(safe_inputs), min(n_inputs, len(safe_inputs)))
+        max_pos = max(position[i] for i in chosen_inputs)
+
+        # Outputs strictly after all inputs
+        outs = [n for n in all_names if position[n] > max_pos]
+        if not outs:
             continue
+        n_outs = random.randint(min_out, max_out)
+        chosen_outs = random.sample(outs, min(n_outs, len(outs)))
 
-        num_outputs = random.randint(min_outputs, max_outputs)
-        output_names = random.sample(output_candidates, min(num_outputs, len(output_candidates)))
-        output_items_list = [generate_item_with_random_quantity(name) for name in output_names]
+        recipes_list.append(
+            Recipe(
+                f"Recipe_{recipe_idx}",
+                [generate_item_with_random_quantity(i) for i in chosen_inputs],
+                [generate_item_with_random_quantity(o) for o in chosen_outs],
+            )
+        )
+        recipe_idx += 1
+        safe_inputs.update(chosen_outs)
+        produced.update(chosen_outs)
+        remaining -= 1
 
-        recipe_name = f"Alternate: Recipe_{recipe_index}"
-        new_recipe = Recipe(recipe_name, input_items_list, output_items_list)
-        generated_recipes.append(new_recipe)
-        recipe_index += 1
+    # ---------- Fallback if still short ----------
+    while len(recipes_list) < recipes:
+        a, b = random.sample(ordering, 2)
+        if position[a] < position[b]:
+            recipes_list.append(
+                Recipe(
+                    f"Recipe_{recipe_idx}",
+                    [generate_item_with_random_quantity(a)],
+                    [generate_item_with_random_quantity(b)],
+                )
+            )
+            recipe_idx += 1
 
-        safe_to_use_as_input_names.update(output_names)
-        remaining_recipes -= 1
+    return recipes_list
 
-    return generated_recipes
 
-def generate_item_with_random_quantity(name: str, multiplier: float = 1.0) -> Item:
-    quantity_per_min = random.uniform(0.1, 10.0) * multiplier
+
+def generate_item_with_random_quantity(name: str, multiplier: float = 1.0, addend: float = 0.0) -> Item:
+    quantity_per_min = random.uniform(0.5, 10.0) * multiplier + addend
     return Item(name, quantity_per_min)
+
 
 
 if __name__=="__main__":
