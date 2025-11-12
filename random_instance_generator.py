@@ -52,7 +52,7 @@ def generate_instance(
 ) -> None:
     result = {
         "recipes": [recipe.to_dict() for recipe in generate_recipes(items, input_items, output_items, recipes, seed)],
-        "available_inputs": [generate_item_with_random_quantity(f"Item_{i}", multiplier=10.0, addend=100.0).to_dict() for i in range(input_items)],
+        "available_inputs": [generate_item_with_random_quantity(f"Item_{i}", multiplier=20.0, addend=200.0).to_dict() for i in range(input_items)],
         "desired_outputs": [generate_item_with_random_quantity(f"Item_{i}", multiplier=2.0).to_dict() for i in range(items - output_items, items)],
     }
     with open(os.path.join(outdir, f"{instance_name}.json"), 'w', encoding='utf-8') as f:
