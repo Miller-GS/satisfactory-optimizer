@@ -31,7 +31,7 @@ public class Decoder {
                 // Sometimes, a recipe outputs an item that it also uses as input (e.g., Water)
                 // Only consider outputs that have a positive resulting quantity
                 // Also, do not consider byproducts to avoid cycles in the recipe graph
-                if (output.isPrimary() && recipe.getResultingQuantityForItem(output.getItemName()) > 0) {
+                if (true && recipe.getResultingQuantityForItem(output.getItemName()) > 0) {
                     map.computeIfAbsent(output.getItemName(), k -> new ArrayList<>()).add(recipe);
                 }
             }
@@ -68,10 +68,12 @@ public class Decoder {
         Map<String, Double> recipeUsages = new HashMap<>();
         // Positive represents demand, negative represents supply
         Map<String, Double> itemLiquidDemand = new HashMap<>();
+        double unsatisfiedDemand = 0.0;
 
         // Initialize demand
         for (ItemUsage item : instance.getFinalProducts()) {
             itemLiquidDemand.put(item.getItemName(), item.getQuantityPerMinute());
+            unsatisfiedDemand += item.getQuantityPerMinute();
         }
         // Initialize supply
         for (ItemUsage item : instance.getRawMaterials()) {
@@ -84,61 +86,69 @@ public class Decoder {
         int index = 0;
         double denominator;
 
-        for (String itemName : reverseTopologicalOrder) {
-            List<Recipe> recipes = itemToRecipesMap.get(itemName);
-            int nRecipesForItem = (recipes != null) ? recipes.size() : 0;
-            if (nRecipesForItem <= 1) {
-                denominator = 1.0; // no genes for this item
-            } else {
-                // genes from index to index + nRecipesForItem - 1 represent the proportions for each recipe producing this item
-                denominator = chromosome.subList(index, index + nRecipesForItem).stream().mapToDouble(Double::doubleValue).sum();
-            }
-            double itemDemand = itemLiquidDemand.getOrDefault(itemName, 0.0);
+        // Iterate multiple times to better satisfy demands in complex graphs
+        for (int repeat = 0; repeat < 5 && unsatisfiedDemand > 0; repeat++) {
+            index = 0;
+            for (String itemName : reverseTopologicalOrder) {
+                List<Recipe> recipes = itemToRecipesMap.get(itemName);
+                int nRecipesForItem = (recipes != null) ? recipes.size() : 0;
+                if (nRecipesForItem <= 1) {
+                    denominator = 1.0; // no genes for this item
+                } else {
+                    // genes from index to index + nRecipesForItem - 1 represent the proportions for each recipe producing this item
+                    denominator = chromosome.subList(index, index + nRecipesForItem).stream().mapToDouble(Double::doubleValue).sum();
+                }
+                double itemDemand = itemLiquidDemand.getOrDefault(itemName, 0.0);
 
-            if (itemDemand <= 0.0) {
-                // No demand to satisfy for this item
+                if (itemDemand <= 0.0) {
+                    // No demand to satisfy for this item
+                    // Move index forward to the start of the next item's genes
+                    if (nRecipesForItem > 1) {
+                        index += nRecipesForItem;
+                    }
+                    continue;
+                }
+
+                for (int i = 0; i < nRecipesForItem; i++) {
+                    Recipe recipe = recipes.get(i);
+                    // If there's only one recipe for this item, there is no corresponding gene; assume value 1.0
+                    double geneValue = nRecipesForItem > 1 ? chromosome.get(index + i) : 1.0;
+
+                    // proportion of the demand for this item to be fulfilled by this recipe
+                    // if the denominator is 0, distribute evenly among all recipes
+                    double proportion = (denominator == 0.0) ? 1.0 / nRecipesForItem : geneValue / denominator;
+                    double demandSatisfiedByThisRecipe = proportion * itemDemand;
+
+                    double recipeUsage = demandSatisfiedByThisRecipe / recipe.getResultingQuantityForItem(itemName);
+                    recipeUsages.put(
+                        recipe.getRecipeName(),
+                        recipeUsage + recipeUsages.getOrDefault(recipe.getRecipeName(), 0.0)
+                    );
+
+                    // Update demands for inputs
+                    for (ItemUsage input : recipe.getInputs()) {
+                        String inputItemName = input.getItemName();
+                        double inputQuantity = recipeUsage * input.getQuantityPerMinute();
+                        double previousDemand = itemLiquidDemand.getOrDefault(inputItemName, 0.0);
+                        itemLiquidDemand.put(
+                            inputItemName,
+                            previousDemand + inputQuantity
+                        );
+                        unsatisfiedDemand += Math.max(inputQuantity - previousDemand, 0.0);
+                    }
+                }
                 // Move index forward to the start of the next item's genes
+                // If there was only one recipe for this item, no genes were used
                 if (nRecipesForItem > 1) {
                     index += nRecipesForItem;
                 }
-                continue;
-            }
-
-            for (int i = 0; i < nRecipesForItem; i++) {
-                Recipe recipe = recipes.get(i);
-                // If there's only one recipe for this item, there is no corresponding gene; assume value 1.0
-                double geneValue = nRecipesForItem > 1 ? chromosome.get(index + i) : 1.0;
-
-                // proportion of the demand for this item to be fulfilled by this recipe
-                // if the denominator is 0, distribute evenly among all recipes
-                double proportion = (denominator == 0.0) ? 1.0 / nRecipesForItem : geneValue / denominator;
-                double demandSatisfiedByThisRecipe = proportion * itemDemand;
-
-                double recipeUsage = demandSatisfiedByThisRecipe / recipe.getResultingQuantityForItem(itemName);
-                recipeUsages.put(
-                    recipe.getRecipeName(),
-                    recipeUsage + recipeUsages.getOrDefault(recipe.getRecipeName(), 0.0)
-                );
-
-                // Update demands for inputs
-                for (ItemUsage input : recipe.getInputs()) {
-                    String inputItemName = input.getItemName();
-                    double inputQuantity = recipeUsage * input.getQuantityPerMinute();
-                    itemLiquidDemand.put(
-                        inputItemName,
-                        itemLiquidDemand.getOrDefault(inputItemName, 0.0) + inputQuantity
-                    );
+                if (nRecipesForItem > 0) {
+                    unsatisfiedDemand -= itemDemand;
+                    itemLiquidDemand.put(itemName, 0.0); // demand for this item has been satisfied
                 }
             }
-            // Move index forward to the start of the next item's genes
-            // If there was only one recipe for this item, no genes were used
-            if (nRecipesForItem > 1) {
-                index += nRecipesForItem;
-            }
-            if (nRecipesForItem > 0) {
-                itemLiquidDemand.put(itemName, 0.0); // demand for this item has been satisfied
-            }
         }
+
         return new DecodedSolution(recipeUsages, itemLiquidDemand);
     }
 }
