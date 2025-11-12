@@ -1,6 +1,21 @@
 package com.satisfactory_solver.problems.solvers;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.ConsoleHandler;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 import com.satisfactory_solver.metaheuristics.ga.AbstractGA;
 import com.satisfactory_solver.problems.Satisfactory;
 import com.satisfactory_solver.decoder.DecodedSolution;
@@ -129,27 +144,126 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 	 */
 	public static void main(String[] args) throws IOException {
 
-		long startTime = System.currentTimeMillis();
-		GA_Satisfactory ga = new GA_Satisfactory(10000, 100, 1.0 / 100.0, "instances/phase3.json", 60L);
-		Solution<Double> bestSol = ga.solve();
-		System.out.println("maxVal = " + bestSol);
-		long endTime = System.currentTimeMillis();
-		long totalTime = endTime - startTime;
-		System.out.println("Time = " + (double) totalTime / (double) 1000 + " seg");
+		// Default instance files (if none provided as args)
+		List<String> instanceFiles = new ArrayList<>();
+		if (args.length > 0) {
+			for (String a : args) instanceFiles.add(a);
+		} else {
+			instanceFiles.add("instances/phase1.json");
+			instanceFiles.add("instances/phase2.json");
+			instanceFiles.add("instances/phase3.json");
+			instanceFiles.add("instances/phase4.json");
+			instanceFiles.add("instances/phase5.json");
+		}
 
-        DecodedSolution decodedSolution = ((Satisfactory) ga.ObjFunction).decode(bestSol);
+		Path logDir = Paths.get("satisfactory_logs");
+		Files.createDirectories(logDir);
 
-        System.out.println("Decoded Recipe Usages:");
-        for (var entry : decodedSolution.getRecipeUsages().entrySet()) {
-            System.out.println("  " + entry.getKey() + ": " + entry.getValue());
-        }
-        var itemLiquidDemand = decodedSolution.getItemLiquidDemand();
-        System.out.println("Item Liquid Demand:");
-        for (var entry : itemLiquidDemand.entrySet()) {
-            System.out.println("  " + entry.getKey() + ": " + entry.getValue());
-        }
-        System.out.println("Unsatisfied Demand Sum: " + decodedSolution.getUnsatisfiedDemandSum());
-        System.out.println("Number of Used Machines: " + decodedSolution.getNumberOfUsedMachines());
+		// Solver suppliers (class names)
+		List<Class<? extends GA_Satisfactory>> solverClasses = List.of(
+				GA_Satisfactory.class,
+				GA_Satisfactory_SteadyState.class,
+				GA_Satisfactory_LHS.class,
+				GA_Satisfactory_HybridAdaptiveMutation.class,
+				GA_Satisfactory_AllStrategies.class
+		);
+
+		// For each instance file, run the solvers in parallel
+		for (String filename : instanceFiles) {
+			Logger mainLogger = Logger.getLogger("GA_Satisfactory.main");
+			mainLogger.setUseParentHandlers(false);
+			mainLogger.setLevel(Level.INFO);
+			ConsoleHandler mainCh = new ConsoleHandler();
+			mainCh.setFormatter(new SimpleFormatter());
+			mainCh.setLevel(Level.INFO);
+			mainLogger.addHandler(mainCh);
+			mainLogger.info("Starting solvers for instance: " + filename);
+
+			int nSolvers = solverClasses.size();
+			ExecutorService exec = Executors.newFixedThreadPool(nSolvers);
+			List<Future<Void>> futures = new ArrayList<>();
+
+			for (Class<? extends GA_Satisfactory> solverClass : solverClasses) {
+				Callable<Void> task = () -> {
+					String solverName = solverClass.getSimpleName();
+					String safeFilename = Paths.get(filename).getFileName().toString().replaceAll("\\\\W+", "_");
+					String logFile = logDir.resolve(solverName + "_" + safeFilename + "_" + System.currentTimeMillis() + ".log").toString();
+
+					// configure logger for this solver
+					Logger solverLogger = Logger.getLogger(solverName + "." + safeFilename + "." + Thread.currentThread().getId());
+					solverLogger.setUseParentHandlers(false);
+					solverLogger.setLevel(Level.INFO);
+					FileHandler solverFh = new FileHandler(logFile, true);
+					solverFh.setFormatter(new SimpleFormatter());
+					solverFh.setLevel(Level.INFO);
+					solverLogger.addHandler(solverFh);
+					ConsoleHandler solverCh = new ConsoleHandler();
+					solverCh.setFormatter(new SimpleFormatter());
+					solverCh.setLevel(Level.INFO);
+					solverLogger.addHandler(solverCh);
+
+					GA_Satisfactory gaInstance;
+					try {
+						gaInstance = solverClass.getConstructor(Integer.class, Integer.class, Double.class, String.class, Long.class)
+								.newInstance(Integer.MAX_VALUE, 100, 1.0 / 100.0, filename, 600L);
+					} catch (Exception e) {
+						solverLogger.log(Level.SEVERE, "Failed to instantiate solver " + solverName + " for file " + filename, e);
+						solverFh.close();
+						return null;
+					}
+
+					// set logger and prefix so GA internals log to the configured logger
+					gaInstance.setLogger(solverLogger);
+					gaInstance.setLogPrefix("[" + solverName + "] ");
+
+					long start = System.currentTimeMillis();
+					try {
+						solverLogger.info("Starting solver " + solverName + " on " + filename);
+						Solution<Double> best = gaInstance.solve();
+						long end = System.currentTimeMillis();
+						solverLogger.info("Solver " + solverName + " finished. Best = " + best);
+						solverLogger.info("Time = " + ((double) (end - start) / 1000.0) + " seg");
+
+						DecodedSolution decoded = ((Satisfactory) gaInstance.ObjFunction).decode(best);
+						solverLogger.info("Decoded Recipe Usages:");
+						for (var entry : decoded.getRecipeUsages().entrySet()) {
+							solverLogger.info("  " + entry.getKey() + ": " + entry.getValue());
+						}
+						var itemLiquidDemand = decoded.getItemLiquidDemand();
+						solverLogger.info("Item Liquid Demand:");
+						for (var entry : itemLiquidDemand.entrySet()) {
+							solverLogger.info("  " + entry.getKey() + ": " + entry.getValue());
+						}
+						solverLogger.info("Unsatisfied Demand Sum: " + decoded.getUnsatisfiedDemandSum());
+						solverLogger.info("Number of Used Machines: " + decoded.getNumberOfUsedMachines());
+
+					} catch (Exception e) {
+						solverLogger.log(Level.SEVERE, "Solver " + solverName + " failed on file " + filename, e);
+					} finally {
+						// close file handler to release the file
+						solverFh.close();
+					}
+
+					return null;
+				};
+
+				futures.add(exec.submit(task));
+			}
+
+			// wait for solvers to finish for this file
+			exec.shutdown();
+			try {
+				boolean finished = exec.awaitTermination(1, TimeUnit.HOURS);
+				if (!finished) {
+					mainLogger.warning("Solvers did not finish within 1 hour for file: " + filename);
+				}
+			} catch (InterruptedException e) {
+				mainLogger.log(Level.SEVERE, "Interrupted while waiting for solvers for file: " + filename, e);
+				Thread.currentThread().interrupt();
+			}
+
+			mainLogger.info("Finished all solvers for instance: " + filename);
+		}
 	}
 
 }
