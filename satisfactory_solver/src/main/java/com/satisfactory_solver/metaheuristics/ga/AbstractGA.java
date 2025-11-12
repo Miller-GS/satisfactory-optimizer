@@ -21,6 +21,14 @@ public abstract class AbstractGA<G extends Number, F> {
 
 	@SuppressWarnings("serial")
 	public class Chromosome extends ArrayList<G> {
+        protected Solution<G> cachedSolution = null;
+
+        public Solution<G> getCachedSolution() {
+            return cachedSolution;
+        }
+        public void setCachedSolution(Solution<G> solution) {
+            this.cachedSolution = solution;
+        }
 	}
 
 	@SuppressWarnings("serial")
@@ -381,11 +389,17 @@ public abstract class AbstractGA<G extends Number, F> {
 	protected Population mutate(Population offsprings) {
 
 		for (Chromosome c : offsprings) {
+            boolean mutated = false;
 			for (int locus = 0; locus < chromosomeSize; locus++) {
 				if (rng.nextDouble() < mutationRate) {
 					mutateGene(c, locus);
+					mutated = true;
 				}
+
 			}
+            if (mutated) {
+                c.setCachedSolution(null);
+            }
 		}
 
 		return offsprings;

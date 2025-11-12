@@ -83,6 +83,9 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 	 */
 	@Override
 	protected Solution<Double> decode(Chromosome chromosome) {
+        Solution<Double> cached = chromosome.getCachedSolution();
+        if (cached != null)
+            return cached;
 
 		Solution<Double> solution = createEmptySol();
 		for (int locus = 0; locus < chromosome.size(); locus++) {
@@ -90,6 +93,7 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 		}
 
 		ObjFunction.evaluate(solution);
+        chromosome.setCachedSolution(solution);
 		return solution;
 	}
 
@@ -124,7 +128,7 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
         // Encourage feasibility over time
         double penaltyMultiplier = currentGeneration / 100.0;
         Solution<Double> decoded = decode(chromosome);
-		return -decode(chromosome).cost - penaltyMultiplier * decoded.infeasibility;
+		return -decoded.cost - penaltyMultiplier * decoded.infeasibility;
 
 	}
 
