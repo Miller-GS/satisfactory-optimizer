@@ -17,6 +17,7 @@ public class GA_Satisfactory_SteadyState extends GA_Satisfactory
         Population population = initializePopulation();
         bestChromosome = getBestChromosome(population);
         bestSol = decode(bestChromosome);
+        logger.info(logPrefix + "(Gen. " + 0 + ") BestSol = " + bestSol);
 
         long startTime = System.currentTimeMillis();
         for (currentGeneration = 1; currentGeneration <= generations; currentGeneration++)
@@ -62,8 +63,11 @@ public class GA_Satisfactory_SteadyState extends GA_Satisfactory
             // Update best solution
             bestChromosome = getBestChromosome(population);
             Solution<Double> bestSolCurrentGen = decode(bestChromosome);
-            if (bestSolCurrentGen.cost < bestSol.cost && ObjFunction.isFeasible(bestSolCurrentGen))
+            if (bestSolCurrentGen.cost < bestSol.cost && ObjFunction.isFeasible(bestSolCurrentGen)) {
                 bestSol = bestSolCurrentGen;
+                if (verbose)
+					logger.info(logPrefix + "(Gen. " + currentGeneration + ") BestSol = " + bestSol);
+            }
 
             long currentTime = System.currentTimeMillis();
             if (timeoutInSeconds != null && (currentTime - startTime) >= timeoutInSeconds * 1000)
@@ -78,5 +82,45 @@ public class GA_Satisfactory_SteadyState extends GA_Satisfactory
 
         return bestSol;
     }
+
+    @Override
+    protected Population crossover(Population parents)
+    {
+        Population offsprings = new Population();
+    
+        Chromosome parent1 = parents.get(0);
+        Chromosome parent2 = parents.get(1);
+
+        // Get both crosspoints from random generation
+        int crosspoint1 = rng.nextInt(chromosomeSize);
+        int crosspoint2 = rng.nextInt(chromosomeSize);
+
+        // If the first one turns out to be bigger, we switch both values
+        if (crosspoint1 > crosspoint2)
+        {
+            int temp = crosspoint1;
+            crosspoint1 = crosspoint2;
+            crosspoint2 = temp;
+        }
+    
+        Chromosome offspring1 = new Chromosome();
+        Chromosome offspring2 = new Chromosome();
+    
+        for (int j = 0; j < chromosomeSize; j++) {
+            if (j >= crosspoint1 && j < crosspoint2) {
+                offspring1.add(parent2.get(j));
+                offspring2.add(parent1.get(j));
+            } else {
+                offspring1.add(parent1.get(j));
+                offspring2.add(parent2.get(j));
+            }
+        }
+    
+        offsprings.add(offspring1);
+        offsprings.add(offspring2);
+    
+    	return offsprings;
+    }
 }
+
 
