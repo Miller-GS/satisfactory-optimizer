@@ -17,6 +17,7 @@ public class GA_Satisfactory_SteadyState extends GA_Satisfactory
         Population population = initializePopulation();
         bestChromosome = getBestChromosome(population);
         bestSol = decode(bestChromosome);
+        logger.info(logPrefix + "(Gen. " + 0 + ") BestSol = " + bestSol);
 
         long startTime = System.currentTimeMillis();
         for (currentGeneration = 1; currentGeneration <= generations; currentGeneration++)
@@ -62,8 +63,11 @@ public class GA_Satisfactory_SteadyState extends GA_Satisfactory
             // Update best solution
             bestChromosome = getBestChromosome(population);
             Solution<Double> bestSolCurrentGen = decode(bestChromosome);
-            if (bestSolCurrentGen.cost < bestSol.cost && ObjFunction.isFeasible(bestSolCurrentGen))
+            if (bestSolCurrentGen.cost < bestSol.cost && ObjFunction.isFeasible(bestSolCurrentGen)) {
                 bestSol = bestSolCurrentGen;
+                if (verbose)
+					logger.info(logPrefix + "(Gen. " + currentGeneration + ") BestSol = " + bestSol);
+            }
 
             long currentTime = System.currentTimeMillis();
             if (timeoutInSeconds != null && (currentTime - startTime) >= timeoutInSeconds * 1000)
