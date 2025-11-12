@@ -18,7 +18,7 @@ def main() -> None:
 
     model = build_model(instance, env)
 
-    model.setParam(GRB.Param.TimeLimit, 3600)  # 1 hour time limit
+    model.setParam(GRB.Param.TimeLimit, 600)  # 10 minutes time limit
     model.optimize()
     
     # Print the solution nicely
