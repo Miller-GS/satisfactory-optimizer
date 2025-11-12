@@ -78,5 +78,45 @@ public class GA_Satisfactory_SteadyState extends GA_Satisfactory
 
         return bestSol;
     }
+
+    @Override
+    protected Population crossover(Population parents)
+    {
+        Population offsprings = new Population();
+    
+        Chromosome parent1 = parents.get(0);
+        Chromosome parent2 = parents.get(1);
+
+        // Get both crosspoints from random generation
+        int crosspoint1 = rng.nextInt(chromosomeSize);
+        int crosspoint2 = rng.nextInt(chromosomeSize);
+
+        // If the first one turns out to be bigger, we switch both values
+        if (crosspoint1 > crosspoint2)
+        {
+            int temp = crosspoint1;
+            crosspoint1 = crosspoint2;
+            crosspoint2 = temp;
+        }
+    
+        Chromosome offspring1 = new Chromosome();
+        Chromosome offspring2 = new Chromosome();
+    
+        for (int j = 0; j < chromosomeSize; j++) {
+            if (j >= crosspoint1 && j < crosspoint2) {
+                offspring1.add(parent2.get(j));
+                offspring2.add(parent1.get(j));
+            } else {
+                offspring1.add(parent1.get(j));
+                offspring2.add(parent2.get(j));
+            }
+        }
+    
+        offsprings.add(offspring1);
+        offsprings.add(offspring2);
+    
+    	return offsprings;
+    }
 }
+
 
