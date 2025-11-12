@@ -121,7 +121,8 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 	 */
 	@Override
 	protected Double fitness(Chromosome chromosome) {
-        double penaltyMultiplier = 1.0;
+        // Encourage feasibility over time
+        double penaltyMultiplier = currentGeneration / 100.0;
         Solution<Double> decoded = decode(chromosome);
 		return -decode(chromosome).cost - penaltyMultiplier * decoded.infeasibility;
 
@@ -173,6 +174,7 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 
 		// Solver suppliers (class names)
 		List<Class<? extends GA_Satisfactory>> solverClasses = List.of(
+                GA_Satisfactory_Unbiased.class,
 				GA_Satisfactory.class,
 				GA_Satisfactory_SteadyState.class,
 				GA_Satisfactory_LHS.class,
