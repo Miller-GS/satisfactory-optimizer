@@ -29,6 +29,7 @@ import com.satisfactory_solver.decoder.Solution;
  * @author ccavellucci, fusberti
  */
 public class GA_Satisfactory extends AbstractGA<Double, Double> {
+    protected Double biasToMutateToZero = 0.9;
 
 	/**
 	 * Constructor for the GA_Satisfactory class. The Satisfactory objective function is passed as
@@ -102,7 +103,11 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 
 		Chromosome chromosome = new Chromosome();
 		for (int i = 0; i < chromosomeSize; i++) {
-			chromosome.add(rng.nextDouble());
+            // Introduce a chance of having a zero value
+            if (rng.nextDouble() < biasToMutateToZero)
+                chromosome.add(0.0);
+            else
+			    chromosome.add(rng.nextDouble());
 		}
 
 		return chromosome;
@@ -116,8 +121,9 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 	 */
 	@Override
 	protected Double fitness(Chromosome chromosome) {
-
-		return -decode(chromosome).cost;
+        double penaltyMultiplier = 1.0;
+        Solution<Double> decoded = decode(chromosome);
+		return -decode(chromosome).cost - penaltyMultiplier * decoded.infeasibility;
 
 	}
 
@@ -130,11 +136,17 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 	 */
 	@Override
 	protected void mutateGene(Chromosome chromosome, Integer locus) {
-		double newValue = chromosome.get(locus) + rng.nextGaussian() * 0.5;
-		if (newValue < 0.0)
-			newValue = 0.0;
-		if (newValue > 1.0)
-			newValue = 1.0;
+        double rand = rng.nextDouble();
+        double newValue = 0.0;
+
+        // chance of resetting to 0
+        if (rand > biasToMutateToZero) {
+            newValue = chromosome.get(locus) + rng.nextGaussian() * 0.5;
+            if (newValue < 0.05)
+                newValue = 0.0;
+            else if (newValue > 1.0)
+                newValue = 1.0;
+        }
 		chromosome.set(locus, newValue);
 	}
 

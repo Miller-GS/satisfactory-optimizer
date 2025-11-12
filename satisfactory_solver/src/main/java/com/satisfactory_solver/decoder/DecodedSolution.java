@@ -5,7 +5,7 @@ import java.util.Map;
 public class DecodedSolution {
     private Map<String, Double> recipeUsages;
     private Map<String, Double> itemLiquidDemand;
-    private int unsatisfiedDemandSum;
+    private double unsatisfiedDemandSum;
     private int numberOfUsedMachines;
 
     public DecodedSolution(Map<String, Double> recipeUsages, Map<String, Double> itemLiquidDemand) {
@@ -15,8 +15,8 @@ public class DecodedSolution {
         this.numberOfUsedMachines = calculateNumberOfUsedMachines();
     }
 
-    private int calculateUnsatisfiedDemandSum() {
-        int sum = 0;
+    private double calculateUnsatisfiedDemandSum() {
+        double sum = 0;
         for (Double demand : itemLiquidDemand.values()) {
             if (demand > 0) {
                 sum += demand;
@@ -27,8 +27,12 @@ public class DecodedSolution {
 
     private int calculateNumberOfUsedMachines() {
         int count = 0;
-        for (Double usage : recipeUsages.values()) {
+        for (String recipe : recipeUsages.keySet()) {
+            Double usage = recipeUsages.get(recipe);
             count += Math.ceil(usage);
+            if (usage > 1000) {
+                count = count;
+            }
         }
         return count;
     }
@@ -41,7 +45,7 @@ public class DecodedSolution {
         return itemLiquidDemand;
     }
     
-    public int getUnsatisfiedDemandSum() {
+    public double getUnsatisfiedDemandSum() {
         return unsatisfiedDemandSum;
     }
 
