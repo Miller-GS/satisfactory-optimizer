@@ -93,7 +93,9 @@ public class Satisfactory implements Evaluator<Double> {
 	public Double evaluate(Solution<Double> sol) {
 
         DecodedSolution decoded = decoder.decode(sol);
-		return sol.cost = Double.valueOf(decoded.getNumberOfUsedMachines());
+		sol.cost = Double.valueOf(decoded.getNumberOfUsedMachines());
+        sol.infeasibility = decoded.getUnsatisfiedDemandSum();
+        return sol.cost;
 	}
 
     public DecodedSolution decode(Solution<Double> sol) {

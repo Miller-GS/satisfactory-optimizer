@@ -101,8 +101,9 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 	 */
 	@Override
 	protected Double fitness(Chromosome chromosome) {
-
-		return -decode(chromosome).cost;
+        double penaltyMultiplier = 1.0;
+        Solution<Double> decoded = decode(chromosome);
+		return -decode(chromosome).cost - penaltyMultiplier * decoded.infeasibility;
 
 	}
 
@@ -130,7 +131,7 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 	public static void main(String[] args) throws IOException {
 
 		long startTime = System.currentTimeMillis();
-		GA_Satisfactory ga = new GA_Satisfactory(10000, 100, 1.0 / 100.0, "instances/random_1000_recipes_1.json", 60L);
+		GA_Satisfactory ga = new GA_Satisfactory_HybridAdaptiveMutation(10000, 100, 1.0 / 100.0, "instances/random_1000_recipes_1.json", 60L);
 		Solution<Double> bestSol = ga.solve();
 		System.out.println("maxVal = " + bestSol);
 		long endTime = System.currentTimeMillis();
