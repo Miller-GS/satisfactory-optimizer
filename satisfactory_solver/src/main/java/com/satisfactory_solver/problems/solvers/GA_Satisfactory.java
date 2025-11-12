@@ -14,6 +14,7 @@ import com.satisfactory_solver.decoder.Solution;
  * @author ccavellucci, fusberti
  */
 public class GA_Satisfactory extends AbstractGA<Double, Double> {
+    protected Double biasToMutateToZero = 0.9;
 
 	/**
 	 * Constructor for the GA_Satisfactory class. The Satisfactory objective function is passed as
@@ -87,7 +88,11 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 
 		Chromosome chromosome = new Chromosome();
 		for (int i = 0; i < chromosomeSize; i++) {
-			chromosome.add(rng.nextDouble());
+            // Introduce a chance of having a zero value
+            if (rng.nextDouble() < biasToMutateToZero)
+                chromosome.add(0.0);
+            else
+			    chromosome.add(rng.nextDouble());
 		}
 
 		return chromosome;
@@ -116,11 +121,17 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 	 */
 	@Override
 	protected void mutateGene(Chromosome chromosome, Integer locus) {
-		double newValue = chromosome.get(locus) + rng.nextGaussian() * 0.5;
-		if (newValue < 0.0)
-			newValue = 0.0;
-		if (newValue > 1.0)
-			newValue = 1.0;
+        double rand = rng.nextDouble();
+        double newValue = 0.0;
+
+        // chance of resetting to 0
+        if (rand > biasToMutateToZero) {
+            newValue = chromosome.get(locus) + rng.nextGaussian() * 0.5;
+            if (newValue < 0.05)
+                newValue = 0.0;
+            else if (newValue > 1.0)
+                newValue = 1.0;
+        }
 		chromosome.set(locus, newValue);
 	}
 
@@ -131,7 +142,7 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 	public static void main(String[] args) throws IOException {
 
 		long startTime = System.currentTimeMillis();
-		GA_Satisfactory ga = new GA_Satisfactory_HybridAdaptiveMutation(10000, 100, 1.0 / 100.0, "instances/random_1000_recipes_1.json", 60L);
+		GA_Satisfactory ga = new GA_Satisfactory(100000, 200, 1.0 / 100.0, "instances/phase3.json", 60L);
 		Solution<Double> bestSol = ga.solve();
 		System.out.println("maxVal = " + bestSol);
 		long endTime = System.currentTimeMillis();
