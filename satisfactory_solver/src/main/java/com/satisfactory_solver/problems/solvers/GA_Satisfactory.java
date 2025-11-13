@@ -166,26 +166,16 @@ public class GA_Satisfactory extends AbstractGA<Double, Double> {
 		if (args.length > 0) {
 			for (String a : args) instanceFiles.add(a);
 		} else {
-            instanceFiles.add("instances/phase1_half_alternates.json");
-            instanceFiles.add("instances/phase1.json");
-            instanceFiles.add("instances/phase2_half_alternates.json");
-            instanceFiles.add("instances/phase2.json");
-            instanceFiles.add("instances/phase3_half_alternates.json");
-            instanceFiles.add("instances/phase3.json");
-            instanceFiles.add("instances/phase4_half_alternates.json");
-            instanceFiles.add("instances/phase4.json");
-            instanceFiles.add("instances/phase5_half_alternates.json");
-            instanceFiles.add("instances/phase5.json");
-            instanceFiles.add("instances/random_instance_1520_items_1.json");
-            instanceFiles.add("instances/random_instance_1520_items_2.json");
-            instanceFiles.add("instances/random_instance_1520_items_3.json");
-            instanceFiles.add("instances/random_instance_1520_items_4.json");
-            instanceFiles.add("instances/random_instance_1520_items_5.json");
-            instanceFiles.add("instances/random_instance_1520_items_6.json");
-            instanceFiles.add("instances/random_instance_1520_items_7.json");
-            instanceFiles.add("instances/random_instance_1520_items_8.json");
-            instanceFiles.add("instances/random_instance_1520_items_9.json");
-            instanceFiles.add("instances/random_instance_1520_items_10.json");
+            instanceFiles.add("instances/random_instance_1000_recipes_1.json");
+            instanceFiles.add("instances/random_instance_1000_recipes_2.json");
+            instanceFiles.add("instances/random_instance_1000_recipes_3.json");
+            instanceFiles.add("instances/random_instance_1000_recipes_4.json");
+            instanceFiles.add("instances/random_instance_1000_recipes_5.json");
+            instanceFiles.add("instances/random_instance_1000_recipes_6.json");
+            instanceFiles.add("instances/random_instance_1000_recipes_7.json");
+            instanceFiles.add("instances/random_instance_1000_recipes_8.json");
+            instanceFiles.add("instances/random_instance_1000_recipes_9.json");
+            instanceFiles.add("instances/random_instance_1000_recipes_10.json");
 		}
 
 		Path logDir = Paths.get("satisfactory_logs");
