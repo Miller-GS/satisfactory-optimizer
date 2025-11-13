@@ -1,0 +1,301 @@
+solver;run;success;time_seconds;best_cost;error
+GA_Satisfactory_Unbiased;1;true;154,804000;386,000000;
+GA_Satisfactory_Unbiased;2;true;163,529000;395,000000;
+GA_Satisfactory_Unbiased;3;true;154,238000;394,000000;
+GA_Satisfactory_Unbiased;4;true;112,991000;397,000000;
+GA_Satisfactory_Unbiased;5;true;123,324000;400,000000;
+GA_Satisfactory_Unbiased;6;true;154,201000;392,000000;
+GA_Satisfactory_Unbiased;7;true;149,616000;399,000000;
+GA_Satisfactory_Unbiased;8;true;114,095000;399,000000;
+GA_Satisfactory_Unbiased;9;true;155,358000;400,000000;
+GA_Satisfactory_Unbiased;10;true;201,137000;395,000000;
+GA_Satisfactory_Unbiased;11;true;147,304000;388,000000;
+GA_Satisfactory_Unbiased;12;true;127,226000;397,000000;
+GA_Satisfactory_Unbiased;13;true;113,165000;398,000000;
+GA_Satisfactory_Unbiased;14;true;169,961000;394,000000;
+GA_Satisfactory_Unbiased;15;true;142,908000;392,000000;
+GA_Satisfactory_Unbiased;16;true;112,905000;400,000000;
+GA_Satisfactory_Unbiased;17;true;133,297000;400,000000;
+GA_Satisfactory_Unbiased;18;true;138,343000;399,000000;
+GA_Satisfactory_Unbiased;19;true;135,943000;398,000000;
+GA_Satisfactory_Unbiased;20;true;131,805000;392,000000;
+GA_Satisfactory;1;true;12,372000;391,000000;
+GA_Satisfactory;2;true;12,175000;376,000000;
+GA_Satisfactory;3;true;8,738000;394,000000;
+GA_Satisfactory;4;true;10,234000;352,000000;
+GA_Satisfactory;5;true;15,968000;288,000000;
+GA_Satisfactory;6;true;9,153000;398,000000;
+GA_Satisfactory;7;true;9,680000;379,000000;
+GA_Satisfactory;8;true;9,244000;400,000000;
+GA_Satisfactory;9;true;12,496000;398,000000;
+GA_Satisfactory;10;true;10,156000;385,000000;
+GA_Satisfactory;11;true;10,614000;277,000000;
+GA_Satisfactory;12;true;9,329000;313,000000;
+GA_Satisfactory;13;true;10,962000;279,000000;
+GA_Satisfactory;14;true;11,776000;367,000000;
+GA_Satisfactory;15;true;14,481000;323,000000;
+GA_Satisfactory;16;true;14,129000;337,000000;
+GA_Satisfactory;17;true;14,717000;346,000000;
+GA_Satisfactory;18;true;10,786000;335,000000;
+GA_Satisfactory;19;true;8,438000;347,000000;
+GA_Satisfactory;20;true;10,020000;396,000000;
+GA_Satisfactory_SteadyState;1;true;5,777000;400,000000;
+GA_Satisfactory_SteadyState;2;true;4,967000;386,000000;
+GA_Satisfactory_SteadyState;3;true;11,391000;370,000000;
+GA_Satisfactory_SteadyState;4;true;5,175000;387,000000;
+GA_Satisfactory_SteadyState;5;true;9,496000;319,000000;
+GA_Satisfactory_SteadyState;6;true;5,570000;383,000000;
+GA_Satisfactory_SteadyState;7;true;6,974000;386,000000;
+GA_Satisfactory_SteadyState;8;true;5,612000;382,000000;
+GA_Satisfactory_SteadyState;9;true;6,029000;396,000000;
+GA_Satisfactory_SteadyState;10;true;16,524000;305,000000;
+GA_Satisfactory_SteadyState;11;true;5,626000;332,000000;
+GA_Satisfactory_SteadyState;12;true;9,208000;391,000000;
+GA_Satisfactory_SteadyState;13;true;5,713000;400,000000;
+GA_Satisfactory_SteadyState;14;true;5,078000;399,000000;
+GA_Satisfactory_SteadyState;15;true;24,955000;339,000000;
+GA_Satisfactory_SteadyState;16;true;6,369000;296,000000;
+GA_Satisfactory_SteadyState;17;true;10,313000;329,000000;
+GA_Satisfactory_SteadyState;18;true;5,453000;379,000000;
+GA_Satisfactory_SteadyState;19;true;6,706000;337,000000;
+GA_Satisfactory_SteadyState;20;true;5,461000;346,000000;
+GA_Satisfactory_LHS;1;true;18,484000;398,000000;
+GA_Satisfactory_LHS;2;true;18,812000;398,000000;
+GA_Satisfactory_LHS;3;true;19,040000;399,000000;
+GA_Satisfactory_LHS;4;true;20,511000;378,000000;
+GA_Satisfactory_LHS;5;true;17,189000;372,000000;
+GA_Satisfactory_LHS;6;true;15,173000;384,000000;
+GA_Satisfactory_LHS;7;true;19,465000;392,000000;
+GA_Satisfactory_LHS;8;true;16,636000;386,000000;
+GA_Satisfactory_LHS;9;true;18,067000;387,000000;
+GA_Satisfactory_LHS;10;true;16,605000;400,000000;
+GA_Satisfactory_LHS;11;true;18,206000;385,000000;
+GA_Satisfactory_LHS;12;true;15,947000;353,000000;
+GA_Satisfactory_LHS;13;true;17,529000;385,000000;
+GA_Satisfactory_LHS;14;true;16,678000;389,000000;
+GA_Satisfactory_LHS;15;true;16,409000;398,000000;
+GA_Satisfactory_LHS;16;true;15,678000;399,000000;
+GA_Satisfactory_LHS;17;true;18,445000;400,000000;
+GA_Satisfactory_LHS;18;true;17,969000;393,000000;
+GA_Satisfactory_LHS;19;true;20,056000;384,000000;
+GA_Satisfactory_LHS;20;true;18,792000;389,000000;
+GA_Satisfactory_HybridAdaptiveMutation;1;true;21,012000;361,000000;
+GA_Satisfactory_HybridAdaptiveMutation;2;true;18,286000;348,000000;
+GA_Satisfactory_HybridAdaptiveMutation;3;true;17,642000;400,000000;
+GA_Satisfactory_HybridAdaptiveMutation;4;true;17,967000;371,000000;
+GA_Satisfactory_HybridAdaptiveMutation;5;true;24,522000;342,000000;
+GA_Satisfactory_HybridAdaptiveMutation;6;true;18,418000;342,000000;
+GA_Satisfactory_HybridAdaptiveMutation;7;false;600,202000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_HybridAdaptiveMutation;8;true;24,477000;344,000000;
+GA_Satisfactory_HybridAdaptiveMutation;9;true;17,689000;323,000000;
+GA_Satisfactory_HybridAdaptiveMutation;10;true;21,054000;391,000000;
+GA_Satisfactory_HybridAdaptiveMutation;11;true;16,925000;388,000000;
+GA_Satisfactory_HybridAdaptiveMutation;12;true;16,284000;397,000000;
+GA_Satisfactory_HybridAdaptiveMutation;13;true;15,435000;385,000000;
+GA_Satisfactory_HybridAdaptiveMutation;14;true;17,779000;367,000000;
+GA_Satisfactory_HybridAdaptiveMutation;15;true;18,945000;395,000000;
+GA_Satisfactory_HybridAdaptiveMutation;16;true;17,503000;366,000000;
+GA_Satisfactory_HybridAdaptiveMutation;17;true;18,290000;399,000000;
+GA_Satisfactory_HybridAdaptiveMutation;18;true;20,086000;384,000000;
+GA_Satisfactory_HybridAdaptiveMutation;19;true;15,760000;368,000000;
+GA_Satisfactory_HybridAdaptiveMutation;20;true;17,924000;385,000000;
+GA_Satisfactory_AllStrategies;1;false;600,174000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;2;false;600,172000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;3;false;600,136000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;4;false;600,142000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;5;false;600,192000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;6;false;600,195000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;7;false;600,162000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;8;false;600,220000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;9;false;600,150000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;10;false;600,197000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;11;false;600,160000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;12;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;13;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;14;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;15;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;16;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;17;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;18;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;19;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;20;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_Unbiased;21;true;173,913000;398,000000;
+GA_Satisfactory_Unbiased;22;true;155,603000;392,000000;
+GA_Satisfactory_Unbiased;23;true;138,169000;400,000000;
+GA_Satisfactory_Unbiased;24;true;118,722000;386,000000;
+GA_Satisfactory_Unbiased;25;true;134,717000;397,000000;
+GA_Satisfactory_Unbiased;26;true;119,783000;395,000000;
+GA_Satisfactory_Unbiased;27;true;147,888000;395,000000;
+GA_Satisfactory_Unbiased;28;true;124,836000;399,000000;
+GA_Satisfactory_Unbiased;29;true;145,846000;400,000000;
+GA_Satisfactory_Unbiased;30;true;157,272000;397,000000;
+GA_Satisfactory_Unbiased;31;true;142,574000;399,000000;
+GA_Satisfactory_Unbiased;32;true;104,246000;398,000000;
+GA_Satisfactory_Unbiased;33;true;167,310000;399,000000;
+GA_Satisfactory_Unbiased;34;true;184,903000;400,000000;
+GA_Satisfactory_Unbiased;35;true;138,359000;398,000000;
+GA_Satisfactory_Unbiased;36;true;128,149000;396,000000;
+GA_Satisfactory_Unbiased;37;true;142,190000;399,000000;
+GA_Satisfactory_Unbiased;38;true;175,372000;398,000000;
+GA_Satisfactory_Unbiased;39;true;225,962000;396,000000;
+GA_Satisfactory_Unbiased;40;true;135,297000;400,000000;
+GA_Satisfactory_Unbiased;41;true;140,705000;397,000000;
+GA_Satisfactory_Unbiased;42;true;146,237000;400,000000;
+GA_Satisfactory_Unbiased;43;true;138,485000;398,000000;
+GA_Satisfactory_Unbiased;44;true;148,117000;397,000000;
+GA_Satisfactory_Unbiased;45;true;130,749000;396,000000;
+GA_Satisfactory_Unbiased;46;true;148,215000;394,000000;
+GA_Satisfactory_Unbiased;47;true;133,958000;392,000000;
+GA_Satisfactory_Unbiased;48;true;191,988000;395,000000;
+GA_Satisfactory_Unbiased;49;true;192,805000;399,000000;
+GA_Satisfactory_Unbiased;50;true;181,500000;398,000000;
+GA_Satisfactory;21;true;10,626000;371,000000;
+GA_Satisfactory;22;true;10,856000;398,000000;
+GA_Satisfactory;23;true;9,699000;244,000000;
+GA_Satisfactory;24;true;10,692000;399,000000;
+GA_Satisfactory;25;true;12,310000;387,000000;
+GA_Satisfactory;26;true;10,109000;377,000000;
+GA_Satisfactory;27;true;13,471000;388,000000;
+GA_Satisfactory;28;true;20,278000;304,000000;
+GA_Satisfactory;29;true;14,026000;398,000000;
+GA_Satisfactory;30;true;15,217000;354,000000;
+GA_Satisfactory;31;true;32,781000;246,000000;
+GA_Satisfactory;32;true;24,166000;237,000000;
+GA_Satisfactory;33;true;14,336000;386,000000;
+GA_Satisfactory;34;true;11,440000;299,000000;
+GA_Satisfactory;35;true;10,389000;353,000000;
+GA_Satisfactory;36;true;9,432000;364,000000;
+GA_Satisfactory;37;true;14,612000;330,000000;
+GA_Satisfactory;38;true;12,649000;250,000000;
+GA_Satisfactory;39;true;16,527000;396,000000;
+GA_Satisfactory;40;true;11,138000;282,000000;
+GA_Satisfactory;41;true;14,295000;347,000000;
+GA_Satisfactory;42;true;9,058000;359,000000;
+GA_Satisfactory;43;true;8,689000;350,000000;
+GA_Satisfactory;44;true;15,401000;307,000000;
+GA_Satisfactory;45;true;14,497000;397,000000;
+GA_Satisfactory;46;true;11,341000;393,000000;
+GA_Satisfactory;47;true;20,308000;378,000000;
+GA_Satisfactory;48;true;12,196000;387,000000;
+GA_Satisfactory;49;true;13,976000;320,000000;
+GA_Satisfactory;50;true;13,271000;389,000000;
+GA_Satisfactory_SteadyState;21;true;6,583000;378,000000;
+GA_Satisfactory_SteadyState;22;true;5,502000;396,000000;
+GA_Satisfactory_SteadyState;23;true;4,691000;370,000000;
+GA_Satisfactory_SteadyState;24;true;6,369000;395,000000;
+GA_Satisfactory_SteadyState;25;true;9,380000;389,000000;
+GA_Satisfactory_SteadyState;26;true;7,977000;374,000000;
+GA_Satisfactory_SteadyState;27;true;8,003000;399,000000;
+GA_Satisfactory_SteadyState;28;true;6,338000;308,000000;
+GA_Satisfactory_SteadyState;29;true;7,416000;388,000000;
+GA_Satisfactory_SteadyState;30;true;7,948000;351,000000;
+GA_Satisfactory_SteadyState;31;true;8,267000;341,000000;
+GA_Satisfactory_SteadyState;32;true;6,310000;368,000000;
+GA_Satisfactory_SteadyState;33;true;5,002000;347,000000;
+GA_Satisfactory_SteadyState;34;true;5,846000;398,000000;
+GA_Satisfactory_SteadyState;35;true;6,084000;379,000000;
+GA_Satisfactory_SteadyState;36;true;4,680000;365,000000;
+GA_Satisfactory_SteadyState;37;true;7,303000;297,000000;
+GA_Satisfactory_SteadyState;38;true;6,247000;386,000000;
+GA_Satisfactory_SteadyState;39;true;8,443000;388,000000;
+GA_Satisfactory_SteadyState;40;true;4,812000;392,000000;
+GA_Satisfactory_SteadyState;41;true;7,481000;399,000000;
+GA_Satisfactory_SteadyState;42;true;5,840000;342,000000;
+GA_Satisfactory_SteadyState;43;true;5,335000;325,000000;
+GA_Satisfactory_SteadyState;44;true;6,752000;338,000000;
+GA_Satisfactory_SteadyState;45;true;8,517000;399,000000;
+GA_Satisfactory_SteadyState;46;true;6,192000;400,000000;
+GA_Satisfactory_SteadyState;47;true;7,474000;399,000000;
+GA_Satisfactory_SteadyState;48;true;6,478000;374,000000;
+GA_Satisfactory_SteadyState;49;true;7,329000;353,000000;
+GA_Satisfactory_SteadyState;50;true;10,115000;389,000000;
+GA_Satisfactory_LHS;21;true;18,509000;398,000000;
+GA_Satisfactory_LHS;22;true;19,185000;390,000000;
+GA_Satisfactory_LHS;23;true;20,805000;387,000000;
+GA_Satisfactory_LHS;24;true;21,081000;298,000000;
+GA_Satisfactory_LHS;25;true;17,951000;398,000000;
+GA_Satisfactory_LHS;26;true;20,579000;396,000000;
+GA_Satisfactory_LHS;27;true;20,645000;362,000000;
+GA_Satisfactory_LHS;28;true;20,953000;384,000000;
+GA_Satisfactory_LHS;29;true;20,280000;388,000000;
+GA_Satisfactory_LHS;30;true;20,952000;284,000000;
+GA_Satisfactory_LHS;31;true;20,240000;350,000000;
+GA_Satisfactory_LHS;32;true;18,216000;393,000000;
+GA_Satisfactory_LHS;33;true;17,896000;395,000000;
+GA_Satisfactory_LHS;34;true;18,360000;398,000000;
+GA_Satisfactory_LHS;35;true;17,603000;391,000000;
+GA_Satisfactory_LHS;36;true;21,999000;287,000000;
+GA_Satisfactory_LHS;37;true;21,956000;392,000000;
+GA_Satisfactory_LHS;38;true;20,883000;366,000000;
+GA_Satisfactory_LHS;39;true;19,018000;394,000000;
+GA_Satisfactory_LHS;40;true;20,279000;399,000000;
+GA_Satisfactory_LHS;41;true;21,108000;387,000000;
+GA_Satisfactory_LHS;42;true;21,297000;385,000000;
+GA_Satisfactory_LHS;43;true;19,080000;392,000000;
+GA_Satisfactory_LHS;44;true;20,544000;396,000000;
+GA_Satisfactory_LHS;45;true;17,951000;323,000000;
+GA_Satisfactory_LHS;46;true;19,276000;394,000000;
+GA_Satisfactory_LHS;47;true;16,440000;394,000000;
+GA_Satisfactory_LHS;48;true;18,456000;398,000000;
+GA_Satisfactory_LHS;49;true;16,909000;388,000000;
+GA_Satisfactory_LHS;50;true;15,910000;393,000000;
+GA_Satisfactory_HybridAdaptiveMutation;21;false;600,332000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_HybridAdaptiveMutation;22;false;600,130000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_HybridAdaptiveMutation;23;true;16,769000;400,000000;
+GA_Satisfactory_HybridAdaptiveMutation;24;true;17,093000;386,000000;
+GA_Satisfactory_HybridAdaptiveMutation;25;true;17,863000;340,000000;
+GA_Satisfactory_HybridAdaptiveMutation;26;false;600,184000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_HybridAdaptiveMutation;27;true;25,655000;319,000000;
+GA_Satisfactory_HybridAdaptiveMutation;28;true;16,544000;397,000000;
+GA_Satisfactory_HybridAdaptiveMutation;29;true;21,240000;389,000000;
+GA_Satisfactory_HybridAdaptiveMutation;30;true;26,008000;297,000000;
+GA_Satisfactory_HybridAdaptiveMutation;31;false;600,165000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_HybridAdaptiveMutation;32;true;18,101000;399,000000;
+GA_Satisfactory_HybridAdaptiveMutation;33;false;600,238000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_HybridAdaptiveMutation;34;true;23,621000;398,000000;
+GA_Satisfactory_HybridAdaptiveMutation;35;true;25,765000;373,000000;
+GA_Satisfactory_HybridAdaptiveMutation;36;false;600,197000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_HybridAdaptiveMutation;37;true;25,031000;374,000000;
+GA_Satisfactory_HybridAdaptiveMutation;38;true;22,911000;381,000000;
+GA_Satisfactory_HybridAdaptiveMutation;39;true;19,589000;376,000000;
+GA_Satisfactory_HybridAdaptiveMutation;40;true;17,436000;399,000000;
+GA_Satisfactory_HybridAdaptiveMutation;41;true;17,028000;397,000000;
+GA_Satisfactory_HybridAdaptiveMutation;42;true;21,213000;398,000000;
+GA_Satisfactory_HybridAdaptiveMutation;43;true;19,826000;367,000000;
+GA_Satisfactory_HybridAdaptiveMutation;44;true;22,142000;392,000000;
+GA_Satisfactory_HybridAdaptiveMutation;45;false;600,307000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_HybridAdaptiveMutation;46;true;18,860000;353,000000;
+GA_Satisfactory_HybridAdaptiveMutation;47;true;21,048000;346,000000;
+GA_Satisfactory_HybridAdaptiveMutation;48;true;18,137000;391,000000;
+GA_Satisfactory_HybridAdaptiveMutation;49;true;17,072000;400,000000;
+GA_Satisfactory_HybridAdaptiveMutation;50;true;15,239000;398,000000;
+GA_Satisfactory_AllStrategies;21;false;600,174000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;22;false;600,172000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;23;false;600,136000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;24;false;600,142000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;25;false;600,192000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;26;false;600,195000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;27;false;600,162000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;28;false;600,220000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;29;false;600,150000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;30;false;600,197000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;31;false;600,160000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;32;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;33;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;34;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;35;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;36;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;37;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;38;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;39;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;40;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;41;false;600,160000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;42;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;43;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;44;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;45;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;46;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;47;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;48;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;49;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
+GA_Satisfactory_AllStrategies;50;false;600,127000;-1,000000;solve failed: java.lang.RuntimeException: No feasible solution found.
