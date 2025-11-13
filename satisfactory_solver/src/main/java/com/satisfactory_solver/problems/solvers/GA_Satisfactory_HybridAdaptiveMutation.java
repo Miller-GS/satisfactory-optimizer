@@ -151,6 +151,10 @@ public class GA_Satisfactory_HybridAdaptiveMutation extends GA_Satisfactory
                 logger.warning(logPrefix + "[TIME] Timeout after " + timeoutInSeconds + "s");
                 break;
             }
+            if (targetCostToStop != null && bestSol.cost <= targetCostToStop) {
+                logger.info(logPrefix + "Target cost to stop reached: " + bestSol.cost + " <= " + targetCostToStop);
+                break;    
+            }
 
         }
 

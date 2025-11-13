@@ -58,6 +58,8 @@ public abstract class AbstractGA<G extends Number, F> {
 
     protected int currentGeneration;
 
+    protected Double targetCostToStop = null;
+
 	/**
 	 * the size of the population
 	 */
@@ -213,6 +215,10 @@ public abstract class AbstractGA<G extends Number, F> {
             if (timeoutInSeconds != null && (currentTime - startTime) >= timeoutInSeconds * 1000) {
                 logger.warning(logPrefix + "Timeout reached after " + timeoutInSeconds + " seconds.");
                 break;
+            }
+            if (targetCostToStop != null && bestSol.cost <= targetCostToStop) {
+                logger.info(logPrefix + "Target cost to stop reached: " + bestSol.cost + " <= " + targetCostToStop);
+                break;  
             }
 		}
 
@@ -426,4 +432,7 @@ public abstract class AbstractGA<G extends Number, F> {
 		return offsprings;
 	}
 
+    public void setTargetCostToStop(Double targetCost) {
+        this.targetCostToStop = targetCost;
+    }
 }

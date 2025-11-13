@@ -75,6 +75,10 @@ public class GA_Satisfactory_SteadyState extends GA_Satisfactory
                 logger.warning(logPrefix + "Timeout reached after " + timeoutInSeconds + " seconds.");
                 break;
             }
+            if (targetCostToStop != null && bestSol.cost <= targetCostToStop) {
+                logger.info(logPrefix + "Target cost to stop reached: " + bestSol.cost + " <= " + targetCostToStop);
+                break;  
+            }
         }
 
         if (!ObjFunction.isFeasible(bestSol))
